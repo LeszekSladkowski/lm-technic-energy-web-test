@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>L&M Technic Energy — V2 KROK 3B HERO LIVE</title>
+<title>L&M Technic Energy — V2 KROK 4 PRODUCT TEST</title>
 <style>
 :root{--gold:#c99325;--gold2:#f2c45c;--green:#39f06a;--text:#fff;--muted:#b7b7ad}
 *{box-sizing:border-box}html,body{margin:0;background:#000;color:var(--text);font-family:Arial,Helvetica,sans-serif}body{min-height:100vh}.page{width:min(100%,512px);margin:0 auto;background:#000;min-height:100vh;border-left:1px solid #171717;border-right:1px solid #171717}
@@ -29,8 +29,17 @@
 .hero-subtitle{margin:7px 0 13px;color:#eee;font-size:13px;line-height:1.25;font-weight:500}
 .hero-cta{display:flex;align-items:center;justify-content:center;gap:8px;width:min(100%,320px);min-height:44px;margin:0 auto;padding:10px 15px;border:0;border-radius:8px;background:linear-gradient(180deg,#39ef69,#20c952);color:#031b09;text-decoration:none;font-size:14px;line-height:1.05;font-weight:900;box-shadow:0 0 14px rgba(52,235,103,.25)}
 .hero-cta .cta-arrow{font-size:19px;line-height:1}
-@media(max-width:430px){.lm-logo{width:64px;height:64px;font-size:22px}.brandname{font-size:20px}.shop-btn{min-width:82px;height:46px}.master-header{padding-left:12px;padding-right:12px}.brandbar{gap:10px}.hero-title{font-size:22px}.hero-subtitle{font-size:12px}.hero-cta{font-size:13px}}
-@media(max-width:365px){.brandname{font-size:17px}.lm-logo{width:58px;height:58px}.shop-btn{min-width:74px;font-size:11px}.nav a{font-size:9px}.hero-title{font-size:19px}.hero-cta{font-size:12px}}
+.product-master{padding:4px 14px 24px;background:#000;border-bottom:1px solid rgba(201,147,37,.24)}
+.product-card{overflow:hidden;display:grid;grid-template-columns:42% 58%;min-height:184px;border:1px solid rgba(221,167,48,.82);border-radius:18px;background:linear-gradient(110deg,#080a07 0%,#060806 42%,#071108 100%);box-shadow:0 0 18px rgba(196,139,21,.08)}
+.product-copy{padding:20px 8px 18px 18px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
+.product-title{margin:0;color:#fff;font-size:18px;line-height:1.03;font-weight:900;letter-spacing:.4px}
+.product-premium{margin:3px 0 0;color:#57c72b;font-size:19px;line-height:1.03;font-weight:900;letter-spacing:.5px}
+.product-line{width:86%;height:1px;margin:12px 0 10px;background:linear-gradient(90deg,var(--gold2),rgba(242,196,92,.12))}
+.product-spec{margin:0;color:#d8d8d1;font-size:12px;line-height:1.35;font-weight:600}
+.product-visual{min-width:0;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 45% 50%,rgba(26,73,24,.32),transparent 70%)}
+.product-visual img{display:block;width:100%;height:100%;max-height:184px;object-fit:contain;object-position:center}
+@media(max-width:430px){.lm-logo{width:64px;height:64px;font-size:22px}.brandname{font-size:20px}.shop-btn{min-width:82px;height:46px}.master-header{padding-left:12px;padding-right:12px}.brandbar{gap:10px}.hero-title{font-size:22px}.hero-subtitle{font-size:12px}.hero-cta{font-size:13px}.product-title{font-size:17px}.product-premium{font-size:18px}.product-spec{font-size:11px}}
+@media(max-width:365px){.brandname{font-size:17px}.lm-logo{width:58px;height:58px}.shop-btn{min-width:74px;font-size:11px}.nav a{font-size:9px}.hero-title{font-size:19px}.hero-cta{font-size:12px}.product-card{grid-template-columns:44% 56%;min-height:164px}.product-visual img{max-height:164px}.product-copy{padding-left:14px}.product-title{font-size:15px}.product-premium{font-size:16px}.product-spec{font-size:10px}}
 </style>
 </head>
 <body>
@@ -80,11 +89,26 @@
     </div>
   </div>
 </section>
+
+<section class="product-master" aria-label="Pellet drzewny Premium A1">
+  <div class="product-card">
+    <div class="product-copy">
+      <h2 class="product-title" id="productTitle">PELLET DRZEWNY</h2>
+      <p class="product-premium" id="productPremium">PREMIUM A1</p>
+      <div class="product-line" aria-hidden="true"></div>
+      <p class="product-spec" id="productSpec">68 worków × 15 kg • 1 020 kg</p>
+    </div>
+    <div class="product-visual">
+      <img src="PELLET_MASTER_PRODUCT.jpg" alt="Paleta pelletu L&M Technic Energy Premium A1">
+    </div>
+  </div>
+</section>
 </main>
 <script>
 (()=>{
 const shell=document.getElementById('langShell'),btn=document.getElementById('langButton'),flag=document.getElementById('currentFlag'),name=document.getElementById('currentName');
 const heroTitle=document.getElementById('heroTitle'),heroSubtitle=document.getElementById('heroSubtitle'),heroCtaText=document.getElementById('heroCtaText');
+const productTitle=document.getElementById('productTitle'),productPremium=document.getElementById('productPremium'),productSpec=document.getElementById('productSpec');
 const heroCopy={
 pl:{title:'ENERGIA NATURY',sub:'Pellet Premium A1 dla domu i biznesu',cta:'PRZEJDŹ DO SKLEPU'},
 de:{title:'ENERGIE DER NATUR',sub:'Premium A1 Holzpellets für Haus und Gewerbe',cta:'ZUM SHOP'},
@@ -98,7 +122,20 @@ lv:{title:'DABAS ENERĢIJA',sub:'Premium A1 granulas mājām un uzņēmumiem',ct
 da:{title:'ENERGI FRA NATUREN',sub:'Premium A1-træpiller til hjem og erhverv',cta:'GÅ TIL BUTIKKEN'},
 en:{title:'ENERGY FROM NATURE',sub:'Premium A1 wood pellets for home and business',cta:'GO TO SHOP'}
 };
-function applyHero(code){const t=heroCopy[code]||heroCopy[(code||'pl').split('-')[0]]||heroCopy.pl;heroTitle.textContent=t.title;heroSubtitle.textContent=t.sub;heroCtaText.textContent=t.cta}
+const productCopy={
+pl:{title:'PELLET DRZEWNY',premium:'PREMIUM A1',spec:'68 worków × 15 kg • 1 020 kg'},
+de:{title:'HOLZPELLETS',premium:'PREMIUM A1',spec:'68 Säcke × 15 kg • 1 020 kg'},
+cs:{title:'DŘEVĚNÉ PELETY',premium:'PREMIUM A1',spec:'68 pytlů × 15 kg • 1 020 kg'},
+sk:{title:'DREVENÉ PELETY',premium:'PREMIUM A1',spec:'68 vriec × 15 kg • 1 020 kg'},
+'de-AT':{title:'HOLZPELLETS',premium:'PREMIUM A1',spec:'68 Säcke × 15 kg • 1 020 kg'},
+'de-CH':{title:'HOLZPELLETS',premium:'PREMIUM A1',spec:'68 Säcke × 15 kg • 1 020 kg'},
+nl:{title:'HOUTPELLETS',premium:'PREMIUM A1',spec:'68 zakken × 15 kg • 1 020 kg'},
+be:{title:'HOUTPELLETS',premium:'PREMIUM A1',spec:'68 zakken × 15 kg • 1 020 kg'},
+lv:{title:'KOKSNES GRANULAS',premium:'PREMIUM A1',spec:'68 maisi × 15 kg • 1 020 kg'},
+da:{title:'TRÆPILLER',premium:'PREMIUM A1',spec:'68 sække × 15 kg • 1 020 kg'},
+en:{title:'WOOD PELLETS',premium:'PREMIUM A1',spec:'68 bags × 15 kg • 1,020 kg'}
+};
+function applyHero(code){const h=heroCopy[code]||heroCopy[(code||'pl').split('-')[0]]||heroCopy.pl;heroTitle.textContent=h.title;heroSubtitle.textContent=h.sub;heroCtaText.textContent=h.cta;const p=productCopy[code]||productCopy[(code||'pl').split('-')[0]]||productCopy.pl;productTitle.textContent=p.title;productPremium.textContent=p.premium;productSpec.textContent=p.spec}
 function setOpen(v){shell.classList.toggle('open',v);btn.setAttribute('aria-expanded',String(v))}
 btn.addEventListener('click',e=>{e.stopPropagation();setOpen(!shell.classList.contains('open'))});
 document.querySelectorAll('.opt').forEach(o=>o.addEventListener('click',()=>{const x={code:o.dataset.code,flag:o.dataset.flag,name:o.dataset.name};flag.textContent=x.flag;name.textContent=x.name;document.documentElement.lang=x.code.split('-')[0];localStorage.setItem('lm-language',JSON.stringify(x));applyHero(x.code);setOpen(false)}));
