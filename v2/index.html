@@ -3,144 +3,51 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>L&M Technic Energy — V2 KROK 2A</title>
+<title>L&M Technic Energy — V2 KROK 2</title>
 <style>
-:root{--bg:#050706;--panel:#090c09;--gold:#c99325;--gold2:#f2c45c;--green:#39f06a;--text:#f6f6f2;--muted:#b7b7ad}
-*{box-sizing:border-box}html{scroll-behavior:smooth}html,body{margin:0;background:#000;color:var(--text);font-family:Arial,Helvetica,sans-serif}body{min-height:100vh}
-button,a{font:inherit}.page{width:min(100%,512px);margin:0 auto;background:radial-gradient(circle at 50% 0,#182018 0,#070907 24%,#000 72%);min-height:100vh;border-left:1px solid #171717;border-right:1px solid #171717}
-.top{padding:16px 16px 12px;background:linear-gradient(180deg,#070a07,#020302);border-bottom:1px solid rgba(207,155,45,.35);position:relative;z-index:20}
-.brand{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.logo{width:56px;height:56px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-weight:800;color:var(--gold2);letter-spacing:.5px;box-shadow:0 0 18px rgba(201,147,30,.18)}
-.brand-title{flex:1;font-size:20px;font-weight:800;letter-spacing:.6px}.brand-title span{color:var(--gold2)}.shop{border:1px solid var(--gold);border-radius:12px;padding:10px 13px;color:var(--gold2);font-weight:800;font-size:12px;text-decoration:none}
-.nav{display:flex;gap:7px;overflow:auto;padding:2px 0 12px;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav a{white-space:nowrap;text-decoration:none;color:#ddd;font-size:10px;font-weight:800;letter-spacing:.35px;border:1px solid rgba(202,150,36,.30);border-radius:999px;padding:8px 10px;background:#080a08}
-/* MASTER 001 — JĘZYK / LANGUAGE: kod i zachowanie zachowane 1:1 */
+:root{--gold:#c99325;--gold2:#f2c45c;--text:#fff;--muted:#b7b7ad}
+*{box-sizing:border-box}html,body{margin:0;background:#000;color:var(--text);font-family:Arial,Helvetica,sans-serif}body{min-height:100vh}.page{width:min(100%,512px);margin:0 auto;background:#000;min-height:100vh;border-left:1px solid #171717;border-right:1px solid #171717}.master-img{display:block;width:100%;height:auto}.top-master{line-height:0}.language-wrap{padding:12px 10px 14px;background:#000;border-top:1px solid rgba(201,147,37,.32);border-bottom:1px solid rgba(201,147,37,.32)}
 .language-shell{position:relative;border:1px solid rgba(221,167,48,.8);border-radius:14px;background:linear-gradient(180deg,#0b0e0b,#050605);padding:10px;box-shadow:inset 0 0 18px rgba(196,139,21,.05),0 0 14px rgba(196,139,21,.07)}
 .language-row{display:grid;grid-template-columns:1fr auto;align-items:center;gap:10px}.label{font-size:12px;font-weight:900;letter-spacing:.8px;color:var(--gold2)}
 .lang-btn{appearance:none;border:1px solid var(--gold);background:#0b0d0b;color:#fff;border-radius:11px;min-height:42px;padding:8px 11px;display:flex;align-items:center;gap:8px;font-weight:800;font-size:13px;box-shadow:0 0 12px rgba(201,147,37,.10);cursor:pointer}.lang-btn .flag{font-size:21px}.chev{color:var(--gold2);font-size:12px;transition:.18s transform}.open .chev{transform:rotate(180deg)}
 .menu{position:absolute;z-index:50;left:10px;right:10px;top:calc(100% + 7px);display:none;background:rgba(7,9,7,.985);border:1px solid var(--gold);border-radius:14px;padding:7px;box-shadow:0 18px 45px rgba(0,0,0,.72),0 0 20px rgba(205,149,32,.12);max-height:56vh;overflow:auto}.open .menu{display:block}
 .opt{width:100%;border:0;border-bottom:1px solid rgba(218,165,45,.16);background:transparent;color:#fff;padding:11px 10px;display:flex;align-items:center;gap:11px;text-align:left;font-size:14px;cursor:pointer;border-radius:9px}.opt:last-child{border-bottom:0}.opt:active,.opt:hover{background:linear-gradient(90deg,rgba(36,235,89,.12),rgba(211,153,31,.06))}.opt .flag{font-size:23px;width:30px}.opt strong{font-weight:800}.opt small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
-main{padding:14px 10px 24px}.section{border:1px solid rgba(207,155,45,.72);border-radius:16px;margin:0 0 10px;background:linear-gradient(180deg,rgba(10,14,10,.96),rgba(3,5,3,.98));overflow:hidden;box-shadow:inset 0 0 24px rgba(209,154,34,.025)}
-.hero{min-height:410px;padding:28px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 32%,rgba(36,97,42,.58),rgba(4,7,4,.97) 60%),linear-gradient(#071007,#020302)}.hero-mark{width:150px;height:150px;border:3px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-size:66px;background:#050705;box-shadow:0 0 32px rgba(200,146,31,.18)}.hero h1{font-size:39px;line-height:.95;margin:20px 0 8px}.hero h1 span{color:var(--gold2)}.hero h2{font-size:24px;color:#61db43;margin:7px 0}.hero p{margin:0;color:#d7d7cf;font-size:15px}.cta{margin-top:20px;background:linear-gradient(180deg,#42e86a,#18a644);border:0;border-radius:10px;padding:14px 24px;font-weight:900;color:#041307;min-width:230px}
-.section-head{padding:12px 14px 6px;text-align:center;font-weight:900;letter-spacing:.4px;font-size:17px}.section-head span{color:#66d64f}.sub{font-size:12px;color:var(--muted);text-align:center;padding:0 14px 12px}
-.product-main{padding:14px;min-height:240px;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center;background:radial-gradient(circle at 78% 45%,rgba(32,82,34,.45),transparent 42%)}.pellet-art{height:170px;border:1px solid rgba(200,148,31,.38);border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#16150d,#090b08);font-size:54px;position:relative}.pellet-art small{position:absolute;bottom:12px;font-size:10px;color:var(--gold2);font-weight:800}.product-copy h3{font-size:22px;margin:0 0 8px;color:var(--gold2)}.product-copy p{margin:0 0 5px;color:#ddd;font-size:12px;line-height:1.35}.spec{color:#79dc58!important;font-weight:800}
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px}.card{min-height:145px;border:1px solid rgba(207,155,45,.58);border-radius:13px;background:linear-gradient(180deg,#0d120d,#050705);padding:13px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}.card::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 20%,rgba(51,116,48,.25),transparent 47%);pointer-events:none}.card-icon{font-size:42px;margin-bottom:auto;position:relative}.card h3{font-size:14px;margin:8px 0 3px;color:var(--gold2);position:relative}.card p{font-size:10px;line-height:1.35;color:#c9c9c2;margin:0;position:relative}.why .card{min-height:130px;justify-content:center;text-align:center}.why .card-icon{margin:0 auto 5px}
-.wide{padding:18px 16px;min-height:205px;background:linear-gradient(90deg,rgba(18,38,20,.95),rgba(5,8,5,.98));display:grid;grid-template-columns:1.1fr .9fr;gap:14px;align-items:center}.wide h3{margin:0 0 8px;font-size:20px;color:var(--gold2)}.wide p{font-size:12px;color:#d7d7cf;line-height:1.45;margin:0}.visual{min-height:155px;border:1px solid rgba(207,155,45,.45);border-radius:13px;display:grid;place-items:center;font-size:58px;background:radial-gradient(circle at 50% 45%,rgba(34,98,39,.36),#080a08 62%)}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px}.split-card{min-height:210px;border:1px solid rgba(207,155,45,.58);border-radius:13px;padding:16px;background:radial-gradient(circle at 50% 25%,rgba(36,94,37,.32),#060806 62%);display:flex;flex-direction:column;justify-content:flex-end}.split-card .ico{font-size:48px;margin-bottom:auto}.split-card h3{margin:8px 0 5px;color:#66d64f;font-size:19px}.split-card p{font-size:11px;color:#d1d1ca;line-height:1.4;margin:0}
-.placeholder{padding:20px 16px;text-align:center;border-top:1px dashed rgba(207,155,45,.25)}.placeholder strong{display:block;color:var(--gold2);font-size:15px;margin-bottom:6px}.placeholder span{font-size:11px;color:#9f9f98}.contact{padding:18px 16px;display:flex;align-items:center;gap:12px}.contact-logo{width:74px;height:74px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold2);font-weight:900}.contact-copy{flex:1}.contact-copy h3{margin:0 0 6px;color:var(--gold2)}.contact-copy p{font-size:11px;color:#bbb;margin:0;line-height:1.45}
-.status{margin-top:12px;border:1px dashed rgba(207,155,45,.45);border-radius:13px;padding:13px;color:#d2d2c9;font-size:12px;line-height:1.45}.status b{color:var(--gold2)}
-@media(max-width:390px){.brand-title{font-size:17px}.logo{width:50px;height:50px}.language-row{grid-template-columns:1fr}.lang-btn{width:100%;justify-content:space-between}.hero h1{font-size:33px}.product-main,.wide{grid-template-columns:1fr}.cards,.split{grid-template-columns:1fr 1fr}.hero{min-height:390px}}
+.hero-master{line-height:0;background:#000}.hero-master img{display:block;width:100%;height:auto}
+@media(max-width:390px){.language-row{grid-template-columns:1fr}.lang-btn{width:100%;justify-content:space-between}}
 </style>
 </head>
 <body>
-<div class="page">
-<header class="top">
-  <div class="brand">
-    <div class="logo">L&M</div>
-    <div class="brand-title">TECHNIC <span>ENERGY</span></div>
-    <a class="shop" href="#produkty">SKLEP</a>
-  </div>
-  <nav class="nav" aria-label="Menu strony">
-    <a href="#oferta">OFERTA</a><a href="#produkty">PRODUKTY</a><a href="#magazyn">MAGAZYN</a><a href="#logistyka">LOGISTYKA</a><a href="#kontakt">KONTAKT</a>
-  </nav>
-  <section class="language-shell" id="langShell">
-    <div class="language-row">
-      <div class="label">JĘZYK / LANGUAGE</div>
-      <button class="lang-btn" id="langButton" type="button" aria-haspopup="listbox" aria-expanded="false">
-        <span class="flag" id="currentFlag">🇵🇱</span><span id="currentName">POLSKI</span><span class="chev">▼</span>
-      </button>
-    </div>
-    <div class="menu" id="langMenu" role="listbox" aria-label="Wybór języka">
-      <button class="opt" data-code="pl" data-flag="🇵🇱" data-name="POLSKI"><span class="flag">🇵🇱</span><span><strong>Polski</strong><small>Polska</small></span></button>
-      <button class="opt" data-code="de" data-flag="🇩🇪" data-name="DEUTSCH"><span class="flag">🇩🇪</span><span><strong>Deutsch</strong><small>Deutschland</small></span></button>
-      <button class="opt" data-code="cs" data-flag="🇨🇿" data-name="ČEŠTINA"><span class="flag">🇨🇿</span><span><strong>Čeština</strong><small>Česko</small></span></button>
-      <button class="opt" data-code="sk" data-flag="🇸🇰" data-name="SLOVENČINA"><span class="flag">🇸🇰</span><span><strong>Slovenčina</strong><small>Slovensko</small></span></button>
-      <button class="opt" data-code="de-AT" data-flag="🇦🇹" data-name="DEUTSCH (AT)"><span class="flag">🇦🇹</span><span><strong>Deutsch</strong><small>Österreich</small></span></button>
-      <button class="opt" data-code="de-CH" data-flag="🇨🇭" data-name="SCHWEIZ"><span class="flag">🇨🇭</span><span><strong>Deutsch / Français / Italiano</strong><small>Schweiz / Suisse / Svizzera</small></span></button>
-      <button class="opt" data-code="nl" data-flag="🇳🇱" data-name="NEDERLANDS"><span class="flag">🇳🇱</span><span><strong>Nederlands</strong><small>Nederland</small></span></button>
-      <button class="opt" data-code="be" data-flag="🇧🇪" data-name="BELGIË / BELGIQUE"><span class="flag">🇧🇪</span><span><strong>Nederlands / Français</strong><small>België / Belgique</small></span></button>
-      <button class="opt" data-code="lv" data-flag="🇱🇻" data-name="LATVIEŠU"><span class="flag">🇱🇻</span><span><strong>Latviešu</strong><small>Latvija</small></span></button>
-      <button class="opt" data-code="da" data-flag="🇩🇰" data-name="DANSK"><span class="flag">🇩🇰</span><span><strong>Dansk</strong><small>Danmark</small></span></button>
-      <button class="opt" data-code="en" data-flag="🇬🇧" data-name="ENGLISH"><span class="flag">🇬🇧</span><span><strong>English</strong><small>International</small></span></button>
-    </div>
-  </section>
-</header>
-<main>
-  <section class="section hero" id="oferta">
-    <div class="hero-mark">🌿🔥</div>
-    <h1>L&M <span>TECHNIC ENERGY</span></h1>
-    <h2>ENERGIA NATURY</h2>
-    <p>Pellet Premium A1 dla domu i biznesu</p>
-    <button class="cta" type="button" onclick="document.getElementById('produkty').scrollIntoView({behavior:'smooth'})">PRZEJDŹ DO PRODUKTÓW</button>
+<main class="page">
+  <section class="top-master"><img class="master-img" alt="L&M Technic Energy — nagłówek MASTER" src="data:image/webp;base64,UklGRjgEAABXRUJQVlA4ICwEAABwGwCdASpAAS0APwFusFCrJiSiq9Rs0WAgCWUA0Yiqpx7+an4LJAc66bdUeSO/ePA38q9gD+R/3f0bNBL1f7BiCtxNcFH8nIb8ZNZYuuGZsK7XU+tVz7BDdRzOBF/sw5D1qYRdwwI3a3oi8ysS+nGuu9vnAfCPAtyn5O672/eTWvU0oHnzGGxh/ls/h14mFK4xXue4pvZplrolqVOqVmgixIlSU28w6r2Yh/H5GRI/U3aWxaD7kV9b5REX1qyuzpyXMhZmW3jrraXoWkEFHGlaz9ksNWAK2EwyqtyjS8Ot4aWLYAAA/vS5z51uCEDu/X5ik2cDO7PwBJyoy1hO3Dur0FhAGyh/1vTJ8kWf0hC9GfsDUBGh05G20j7Zwu3GcTSzBA47b4tR0CHYc9c08EZl2JitPi0IHm0/a8aN/aXz9U2U/5Fzf3Q7rTGGAj/ZQ9GVrLiVMwm94NA/HL+6n8+2x815e2P5NYf8hWahTDEVjtkiCvGC5Tl/Jg3uZhKdCQfqvyHPkx1FQ5wqGTfb9FguTRQfcvteqiYDKeFnotkjSQ18CTUi/j/e+r8Vs13L446LDVOV/ER9RMTdnYMNJGoML5JC0gMPlbR4+IjsaYiWfr5A/KEsvunxF9j1YTjCygdR5p+deZkNV2Y4WhLhHB+sijgG6KCvs6Osf82XiB/yjO3l7EsVlwXZ7sMUGnP34BRvqAI2sBcAuTzIWl2/1143N8TvdawRNboDi0foc6mMKafK6BW2uHQjsIwnjKjCpSLp6mhwFNMHkmYrZBebHHQOEGZCJmpf8QTCx9jHHDNODFHaUuiZeO/oJAq8A2ka6CMvl/Vnl4dFK8BkiRWD8xwKp5HZbbO5Z9Xs2CESGNkJJMxS2pLBj6nMxaJPUHeDd8klwgnVuvyiJlZyDRtWWhX8cd1k4yuItwsa3psntoYETqQqRGesi9yT3sq4dvrU/RYJIqPQMhS9CoZnMuE0c5YT8ZpyqSPlt+9vdMIjwpzzR1yN9SQlIwCOMeAtWK9G2cBDn/2ImLU1r5BtyQTfnsMin9CBkswjT3LLNFgV/HG3WXh+DzL+2F7UzMDY+JqhkFH6SgrES5D87Svwz/KuOpOS1+zGR9yg+D2wRX+AQhELqn3gljsTwwY9WDg7LFTaoIV+m/UDeTHMVhOeCsKEk7tCHIuMSteIDRnovmbAnqqFJZeV9OIq9kn+3+xSiYRviqS92pX6tFUbbgjgojbxm/eed+r6MLysg8JKnSauJbrKfR4lyAKRBiuo9K2rWl0hAdNFIai2+nJr9JzK8PMIoQuvkkS4clq6PUXy1GJ9+w+Bwt0FnQ9S5b60yFwh1Le78EZYeniuWXCeDMw09G8t9Tl3Y5o4cs++mlBuOSFJBc5CZMEsLERewmULCOngmrL+5Wrf9Usby7knbQAAAAA="></section>
+
+  <section class="language-wrap">
+    <section class="language-shell" id="langShell">
+      <div class="language-row">
+        <div class="label">JĘZYK / LANGUAGE</div>
+        <button class="lang-btn" id="langButton" type="button" aria-haspopup="listbox" aria-expanded="false">
+          <span class="flag" id="currentFlag">🇵🇱</span><span id="currentName">POLSKI</span><span class="chev">▼</span>
+        </button>
+      </div>
+      <div class="menu" id="langMenu" role="listbox" aria-label="Wybór języka">
+        <button class="opt" data-code="pl" data-flag="🇵🇱" data-name="POLSKI"><span class="flag">🇵🇱</span><span><strong>Polski</strong><small>Polska</small></span></button>
+        <button class="opt" data-code="de" data-flag="🇩🇪" data-name="DEUTSCH"><span class="flag">🇩🇪</span><span><strong>Deutsch</strong><small>Deutschland</small></span></button>
+        <button class="opt" data-code="cs" data-flag="🇨🇿" data-name="ČEŠTINA"><span class="flag">🇨🇿</span><span><strong>Čeština</strong><small>Česko</small></span></button>
+        <button class="opt" data-code="sk" data-flag="🇸🇰" data-name="SLOVENČINA"><span class="flag">🇸🇰</span><span><strong>Slovenčina</strong><small>Slovensko</small></span></button>
+        <button class="opt" data-code="de-AT" data-flag="🇦🇹" data-name="DEUTSCH (AT)"><span class="flag">🇦🇹</span><span><strong>Deutsch</strong><small>Österreich</small></span></button>
+        <button class="opt" data-code="de-CH" data-flag="🇨🇭" data-name="SCHWEIZ"><span class="flag">🇨🇭</span><span><strong>Deutsch / Français / Italiano</strong><small>Schweiz / Suisse / Svizzera</small></span></button>
+        <button class="opt" data-code="nl" data-flag="🇳🇱" data-name="NEDERLANDS"><span class="flag">🇳🇱</span><span><strong>Nederlands</strong><small>Nederland</small></span></button>
+        <button class="opt" data-code="be" data-flag="🇧🇪" data-name="BELGIË / BELGIQUE"><span class="flag">🇧🇪</span><span><strong>Nederlands / Français</strong><small>België / Belgique</small></span></button>
+        <button class="opt" data-code="lv" data-flag="🇱🇻" data-name="LATVIEŠU"><span class="flag">🇱🇻</span><span><strong>Latviešu</strong><small>Latvija</small></span></button>
+        <button class="opt" data-code="da" data-flag="🇩🇰" data-name="DANSK"><span class="flag">🇩🇰</span><span><strong>Dansk</strong><small>Danmark</small></span></button>
+        <button class="opt" data-code="en" data-flag="🇬🇧" data-name="ENGLISH"><span class="flag">🇬🇧</span><span><strong>English</strong><small>International</small></span></button>
+      </div>
+    </section>
   </section>
 
-  <section class="section" id="produkty">
-    <div class="section-head">PELLET DRZEWNY <span>PREMIUM A1</span></div>
-    <div class="sub">Szkielet sekcji produktowej — finalne zdjęcia i opisy do zatwierdzenia w kolejnych krokach.</div>
-    <div class="product-main">
-      <div class="product-copy"><h3>PALETA / WORKI 15 KG</h3><p class="spec">68 worków × 15 kg • 1 020 kg</p><p>Miejsce na zatwierdzony opis produktu i parametry handlowe.</p></div>
-      <div class="pellet-art">🪵<small>GRAFIKA MASTER PRODUKTU</small></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-head">OFERTA DOPASOWANA DO <span>TWOICH POTRZEB</span></div>
-    <div class="cards">
-      <div class="card"><div class="card-icon">🛍️</div><h3>WORKI 15 KG</h3><p>Indywidualny zakup i wygodne przechowywanie.</p></div>
-      <div class="card"><div class="card-icon">📦</div><h3>CAŁA PALETA</h3><p>68 worków × 15 kg — rozwiązanie na większy zapas.</p></div>
-      <div class="card"><div class="card-icon">⚪</div><h3>BIG BAG</h3><p>Duże opakowanie dla większych odbiorców.</p></div>
-      <div class="card"><div class="card-icon">⛰️</div><h3>PELLET LUZEM</h3><p>Dostawy dla większych instalacji i biznesu.</p></div>
-    </div>
-  </section>
-
-  <section class="section why">
-    <div class="section-head">DLACZEGO <span>L&M TECHNIC ENERGY?</span></div>
-    <div class="cards">
-      <div class="card"><div class="card-icon">🌿</div><h3>SPRAWDZONY SUROWIEC</h3><p>Miejsce na finalny opis.</p></div>
-      <div class="card"><div class="card-icon">🏅</div><h3>JAKOŚĆ PREMIUM A1</h3><p>Miejsce na finalny opis.</p></div>
-      <div class="card"><div class="card-icon">🔬</div><h3>KONTROLA JAKOŚCI</h3><p>Miejsce na finalny opis.</p></div>
-      <div class="card"><div class="card-icon">🚚</div><h3>TERMINOWA DOSTAWA</h3><p>Miejsce na finalny opis.</p></div>
-    </div>
-  </section>
-
-  <section class="section" id="logistyka">
-    <div class="wide"><div><h3>LOGISTYKA DOSTAW</h3><p>Docelowo: informacje o zasięgu dostaw, rynku polskim i europejskim, sposobie realizacji oraz przejściu do mapy dostaw.</p></div><div class="visual">🚛🌍</div></div>
-  </section>
-
-  <section class="section">
-    <div class="wide"><div><h3>JAKOŚĆ POTWIERDZONA BADANIAMI</h3><p>Docelowo: najważniejsze parametry pelletu oraz aktywne przejście do raportów i badań laboratoryjnych PDF.</p></div><div class="visual">🔬📄</div></div>
-  </section>
-
-  <section class="section" id="magazyn">
-    <div class="split">
-      <div class="split-card"><div class="ico">🏠</div><h3>DLA DOMU</h3><p>Sekcja potrzeb klienta indywidualnego, wygody, ciepła i oszczędności.</p></div>
-      <div class="split-card"><div class="ico">🏭</div><h3>DLA BIZNESU</h3><p>Sekcja dostaw większych ilości, niezawodności i logistyki dla firm.</p></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-head">O <span>L&M TECHNIC ENERGY</span></div>
-    <div class="placeholder"><strong>HISTORIA FIRMY — DO WSTAWIENIA W KOLEJNYM KROKU</strong><span>Tu trafi zatwierdzony opis powstania firmy jako prawdziwy tekst HTML.</span></div>
-  </section>
-
-  <section class="section">
-    <div class="section-head">WIADOMOŚĆ <span>PREZESA</span></div>
-    <div class="placeholder"><strong>LIST / WIADOMOŚĆ PREZESA — DO WSTAWIENIA W KOLEJNYM KROKU</strong><span>Krótka wersja na stronę internetową, oparta na zatwierdzonym biznesplanie.</span></div>
-  </section>
-
-  <section class="section" id="kontakt">
-    <div class="contact"><div class="contact-logo">L&M</div><div class="contact-copy"><h3>SKONTAKTUJ SIĘ Z NAMI</h3><p>Docelowo: telefon, e-mail, lokalizacja oraz przejście do L&M AI DORADCA 24/7 po zatwierdzeniu odpowiedniego kroku.</p></div></div>
-  </section>
-
-  <div class="status"><b>KROK 2A — SZKIELET V2.</b> To osobna wersja robocza pod adresem <b>/v2/</b>. Główna strona oraz zamrożony MASTER 001 pozostają nietknięte. Na tym etapie oceniamy wyłącznie kolejność sekcji, proporcje, przewijanie i układ mobilny.</div>
+  <section class="hero-master"><img alt="L&M Technic Energy — HERO MASTER" src="data:image/webp;base64,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"></section>
 </main>
-</div>
 <script>
-(()=>{const shell=document.getElementById('langShell'),btn=document.getElementById('langButton'),flag=document.getElementById('currentFlag'),name=document.getElementById('currentName');
-function setOpen(v){shell.classList.toggle('open',v);btn.setAttribute('aria-expanded',String(v))}
-btn.addEventListener('click',e=>{e.stopPropagation();setOpen(!shell.classList.contains('open'))});
-document.querySelectorAll('.opt').forEach(o=>o.addEventListener('click',()=>{const x={code:o.dataset.code,flag:o.dataset.flag,name:o.dataset.name};flag.textContent=x.flag;name.textContent=x.name;document.documentElement.lang=x.code.split('-')[0];localStorage.setItem('lm-language',JSON.stringify(x));setOpen(false)}));
-document.addEventListener('click',e=>{if(!shell.contains(e.target))setOpen(false)});document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)});
-try{const x=JSON.parse(localStorage.getItem('lm-language'));if(x&&x.flag&&x.name){flag.textContent=x.flag;name.textContent=x.name;document.documentElement.lang=(x.code||'pl').split('-')[0]}}catch(e){}
-})();
+(()=>{const shell=document.getElementById('langShell'),btn=document.getElementById('langButton'),flag=document.getElementById('currentFlag'),name=document.getElementById('currentName');function setOpen(v){shell.classList.toggle('open',v);btn.setAttribute('aria-expanded',String(v))}btn.addEventListener('click',e=>{e.stopPropagation();setOpen(!shell.classList.contains('open'))});document.querySelectorAll('.opt').forEach(o=>o.addEventListener('click',()=>{const x={code:o.dataset.code,flag:o.dataset.flag,name:o.dataset.name};flag.textContent=x.flag;name.textContent=x.name;document.documentElement.lang=x.code.split('-')[0];localStorage.setItem('lm-language',JSON.stringify(x));setOpen(false)}));document.addEventListener('click',e=>{if(!shell.contains(e.target))setOpen(false)});document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)});try{const x=JSON.parse(localStorage.getItem('lm-language'));if(x&&x.flag&&x.name){flag.textContent=x.flag;name.textContent=x.name;document.documentElement.lang=(x.code||'pl').split('-')[0]}}catch(e){}})();
 </script>
 </body>
 </html>
