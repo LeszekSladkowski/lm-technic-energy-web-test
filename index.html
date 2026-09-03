@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>L&M Technic Energy — KROK 1 JĘZYK / LANGUAGE</title>
+<style>
+:root{--bg:#050706;--panel:#090c09;--gold:#c99325;--gold2:#f2c45c;--green:#39f06a;--text:#f6f6f2;--muted:#b7b7ad}
+*{box-sizing:border-box}html,body{margin:0;background:#000;color:var(--text);font-family:Arial,Helvetica,sans-serif}body{min-height:100vh}
+.page{width:min(100%,512px);margin:0 auto;background:radial-gradient(circle at 50% 0,#182018 0,#070907 28%,#000 70%);min-height:100vh;border-left:1px solid #171717;border-right:1px solid #171717}
+.top{padding:18px 16px 12px;background:linear-gradient(180deg,#070a07,#020302);border-bottom:1px solid rgba(207,155,45,.35)}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.logo{width:56px;height:56px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-weight:800;color:var(--gold2);letter-spacing:.5px;box-shadow:0 0 18px rgba(201,147,30,.18)}
+.brand-title{flex:1;font-size:20px;font-weight:800;letter-spacing:.6px}.brand-title span{color:var(--gold2)}
+.shop{border:1px solid var(--gold);border-radius:12px;padding:10px 13px;color:var(--gold2);font-weight:800;font-size:12px}
+.language-shell{position:relative;border:1px solid rgba(221,167,48,.8);border-radius:14px;background:linear-gradient(180deg,#0b0e0b,#050605);padding:10px;box-shadow:inset 0 0 18px rgba(196,139,21,.05),0 0 14px rgba(196,139,21,.07)}
+.language-row{display:grid;grid-template-columns:1fr auto;align-items:center;gap:10px}.label{font-size:12px;font-weight:900;letter-spacing:.8px;color:var(--gold2)}
+.lang-btn{appearance:none;border:1px solid var(--gold);background:#0b0d0b;color:#fff;border-radius:11px;min-height:42px;padding:8px 11px;display:flex;align-items:center;gap:8px;font-weight:800;font-size:13px;box-shadow:0 0 12px rgba(201,147,37,.10);cursor:pointer}.lang-btn .flag{font-size:21px}.chev{color:var(--gold2);font-size:12px;transition:.18s transform}.open .chev{transform:rotate(180deg)}
+.menu{position:absolute;z-index:50;left:10px;right:10px;top:calc(100% + 7px);display:none;background:rgba(7,9,7,.985);border:1px solid var(--gold);border-radius:14px;padding:7px;box-shadow:0 18px 45px rgba(0,0,0,.72),0 0 20px rgba(205,149,32,.12);max-height:56vh;overflow:auto}.open .menu{display:block}
+.opt{width:100%;border:0;border-bottom:1px solid rgba(218,165,45,.16);background:transparent;color:#fff;padding:11px 10px;display:flex;align-items:center;gap:11px;text-align:left;font-size:14px;cursor:pointer;border-radius:9px}.opt:last-child{border-bottom:0}.opt:active,.opt:hover{background:linear-gradient(90deg,rgba(36,235,89,.12),rgba(211,153,31,.06))}.opt .flag{font-size:23px;width:30px}.opt strong{font-weight:800}.opt small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+.master-preview{padding:18px 16px 26px}.hero{border:1px solid rgba(207,155,45,.75);border-radius:18px;padding:28px 18px;text-align:center;background:radial-gradient(circle at 50% 30%,rgba(34,95,37,.55),rgba(5,8,5,.95) 58%),linear-gradient(#071007,#020302);min-height:310px;display:flex;flex-direction:column;justify-content:center;box-shadow:inset 0 0 35px rgba(40,132,48,.10)}
+.mark{width:118px;height:118px;margin:0 auto 15px;border:3px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-size:52px;background:#060806;box-shadow:0 0 25px rgba(200,146,31,.16)}
+.hero h1{margin:0;font-size:34px;line-height:1}.hero h1 span{color:var(--gold2)}.hero h2{margin:13px 0 6px;color:#61db43;font-size:23px}.hero p{margin:0;color:#d7d7cf}.cta{margin:20px auto 0;background:linear-gradient(180deg,#42e86a,#18a644);border:0;border-radius:10px;padding:13px 22px;font-weight:900;color:#041307;min-width:220px}
+.note{margin:16px 4px 0;border:1px dashed rgba(207,155,45,.45);border-radius:13px;padding:12px;color:#d2d2c9;font-size:12px;line-height:1.45}.note b{color:var(--gold2)}
+@media(max-width:390px){.brand-title{font-size:17px}.logo{width:50px;height:50px}.language-row{grid-template-columns:1fr}.lang-btn{width:100%;justify-content:space-between}.hero h1{font-size:30px}}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="top">
+  <div class="brand">
+    <div class="logo">L&M</div>
+    <div class="brand-title">TECHNIC <span>ENERGY</span></div>
+    <div class="shop">SKLEP</div>
+  </div>
+  <section class="language-shell" id="langShell">
+    <div class="language-row">
+      <div class="label">JĘZYK / LANGUAGE</div>
+      <button class="lang-btn" id="langButton" type="button" aria-haspopup="listbox" aria-expanded="false">
+        <span class="flag" id="currentFlag">🇵🇱</span><span id="currentName">POLSKI</span><span class="chev">▼</span>
+      </button>
+    </div>
+    <div class="menu" id="langMenu" role="listbox" aria-label="Wybór języka">
+      <button class="opt" data-code="pl" data-flag="🇵🇱" data-name="POLSKI"><span class="flag">🇵🇱</span><span><strong>Polski</strong><small>Polska</small></span></button>
+      <button class="opt" data-code="de" data-flag="🇩🇪" data-name="DEUTSCH"><span class="flag">🇩🇪</span><span><strong>Deutsch</strong><small>Deutschland</small></span></button>
+      <button class="opt" data-code="cs" data-flag="🇨🇿" data-name="ČEŠTINA"><span class="flag">🇨🇿</span><span><strong>Čeština</strong><small>Česko</small></span></button>
+      <button class="opt" data-code="sk" data-flag="🇸🇰" data-name="SLOVENČINA"><span class="flag">🇸🇰</span><span><strong>Slovenčina</strong><small>Slovensko</small></span></button>
+      <button class="opt" data-code="de-AT" data-flag="🇦🇹" data-name="DEUTSCH (AT)"><span class="flag">🇦🇹</span><span><strong>Deutsch</strong><small>Österreich</small></span></button>
+      <button class="opt" data-code="de-CH" data-flag="🇨🇭" data-name="SCHWEIZ"><span class="flag">🇨🇭</span><span><strong>Deutsch / Français / Italiano</strong><small>Schweiz / Suisse / Svizzera</small></span></button>
+      <button class="opt" data-code="nl" data-flag="🇳🇱" data-name="NEDERLANDS"><span class="flag">🇳🇱</span><span><strong>Nederlands</strong><small>Nederland</small></span></button>
+      <button class="opt" data-code="be" data-flag="🇧🇪" data-name="BELGIË / BELGIQUE"><span class="flag">🇧🇪</span><span><strong>Nederlands / Français</strong><small>België / Belgique</small></span></button>
+      <button class="opt" data-code="lv" data-flag="🇱🇻" data-name="LATVIEŠU"><span class="flag">🇱🇻</span><span><strong>Latviešu</strong><small>Latvija</small></span></button>
+      <button class="opt" data-code="da" data-flag="🇩🇰" data-name="DANSK"><span class="flag">🇩🇰</span><span><strong>Dansk</strong><small>Danmark</small></span></button>
+      <button class="opt" data-code="en" data-flag="🇬🇧" data-name="ENGLISH"><span class="flag">🇬🇧</span><span><strong>English</strong><small>International</small></span></button>
+    </div>
+  </section>
+</header>
+<section class="master-preview">
+  <div class="hero">
+    <div class="mark">🌿🔥</div>
+    <h1>L&M <span>TECHNIC ENERGY</span></h1>
+    <h2>ENERGIA NATURY</h2>
+    <p>Pellet Premium A1 dla domu i biznesu</p>
+    <button class="cta" type="button">PRZEJDŹ DO SKLEPU</button>
+  </div>
+  <div class="note"><b>KROK 1 — test funkcjonalny.</b> Dzisiaj wdrażamy tylko przełącznik <b>JĘZYK / LANGUAGE</b>. Wybór zapamiętuje się po odświeżeniu strony. Pozostałe moduły nie są jeszcze wdrażane w tej wersji testowej.</div>
+</section>
+</main>
+<script>
+(()=>{const shell=document.getElementById('langShell'),btn=document.getElementById('langButton'),flag=document.getElementById('currentFlag'),name=document.getElementById('currentName');
+function setOpen(v){shell.classList.toggle('open',v);btn.setAttribute('aria-expanded',String(v))}
+btn.addEventListener('click',e=>{e.stopPropagation();setOpen(!shell.classList.contains('open'))});
+document.querySelectorAll('.opt').forEach(o=>o.addEventListener('click',()=>{const x={code:o.dataset.code,flag:o.dataset.flag,name:o.dataset.name};flag.textContent=x.flag;name.textContent=x.name;document.documentElement.lang=x.code.split('-')[0];localStorage.setItem('lm-language',JSON.stringify(x));setOpen(false)}));
+document.addEventListener('click',e=>{if(!shell.contains(e.target))setOpen(false)});document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)});
+try{const x=JSON.parse(localStorage.getItem('lm-language'));if(x&&x.flag&&x.name){flag.textContent=x.flag;name.textContent=x.name;document.documentElement.lang=(x.code||'pl').split('-')[0]}}catch(e){}
+})();
+</script>
+</body>
+</html>
