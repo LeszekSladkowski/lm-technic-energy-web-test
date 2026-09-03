@@ -1,0 +1,7 @@
+L&M TECHNIC ENERGY — MASTER SNAPSHOT
+KROK 1: JĘZYK / LANGUAGE
+Data: 03.09.2026
+Status: MASTER — 100% ZAMROŻONY
+Referencyjny commit głównego wdrożenia: 931585c467b75d2be6b2316d3be0219f0060edeb
+
+Nie modyfikować zatwierdzonego wyglądu ani funkcjonalności bez wyraźnej zgody właściciela projektu.
