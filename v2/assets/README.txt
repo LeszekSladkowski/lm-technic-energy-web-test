@@ -1,0 +1,1 @@
+Folder na zatwierdzone grafiki MASTER strony L&M Technic Energy. Nie usuwać bez wyraźnej decyzji użytkownika.
