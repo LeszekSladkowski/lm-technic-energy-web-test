@@ -1,0 +1,1 @@
+KROK 5: OFERTA DOPASOWANA DO TWOICH POTRZEB — wersja testowa przed MASTER.
