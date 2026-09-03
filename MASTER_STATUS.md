@@ -54,4 +54,15 @@ Obowiązujący fragment V2:
 8. `JĘZYK / LANGUAGE` ma pozostać stałe, a nazwy wyboru języka mają pozostać m.in. `POLSKI`, `DEUTSCH`, `NEDERLANDS`, `ENGLISH` zgodnie z MASTER 001.
 9. MASTER 001–004 nie mogą być samowolnie zmieniane przy kolejnych etapach. Dalsze elementy strony wolno dodawać wyłącznie poniżej MASTER 004 lub jako nowe funkcje po wyraźnym zatwierdzeniu właściciela projektu.
 
+## MASTER 005 — KAFEL „WORKI 15 KG” / KROK 5A
+Status: **MASTER — BEZAPELACYJNIE ZATWIERDZONY I ZAMROŻONY**
+
+Obowiązujący fragment V2:
+1. Kafla `WORKI 15 KG` w sekcji `OFERTA DOPASOWANA DO TWOICH POTRZEB` nie wolno samowolnie zmieniać.
+2. Obowiązuje zatwierdzona grafika worka w szerokim poziomym kadrze, dopasowana do prawego pola kafla bez szarych pasów, placeholderów ani pustych obszarów.
+3. Grafika zachowuje ciemnozielone tło, worek L&M po lewej części kadru i pellet po prawej, zgodnie z zaakceptowanym wyglądem PREMIUM.
+4. Obowiązuje plik `v2/assets/OFFER_BAGS_15KG_MASTER.svg` jako zamrożony asset tego kafla.
+5. Tekst kafla pozostaje prawdziwym tekstem HTML i zmienia się zgodnie z wybranym językiem.
+6. MASTER 001–005 pozostają nienaruszalne przy dalszej pracy nad pozostałymi kaflami KROKU 5.
+
 Ten plik stanowi punkt referencyjny MASTER dla dalszej rozbudowy strony internetowej.
