@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>L&M Technic Energy — V2 KROK 2A</title>
+<style>
+:root{--bg:#050706;--panel:#090c09;--gold:#c99325;--gold2:#f2c45c;--green:#39f06a;--text:#f6f6f2;--muted:#b7b7ad}
+*{box-sizing:border-box}html{scroll-behavior:smooth}html,body{margin:0;background:#000;color:var(--text);font-family:Arial,Helvetica,sans-serif}body{min-height:100vh}
+button,a{font:inherit}.page{width:min(100%,512px);margin:0 auto;background:radial-gradient(circle at 50% 0,#182018 0,#070907 24%,#000 72%);min-height:100vh;border-left:1px solid #171717;border-right:1px solid #171717}
+.top{padding:16px 16px 12px;background:linear-gradient(180deg,#070a07,#020302);border-bottom:1px solid rgba(207,155,45,.35);position:relative;z-index:20}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.logo{width:56px;height:56px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-weight:800;color:var(--gold2);letter-spacing:.5px;box-shadow:0 0 18px rgba(201,147,30,.18)}
+.brand-title{flex:1;font-size:20px;font-weight:800;letter-spacing:.6px}.brand-title span{color:var(--gold2)}.shop{border:1px solid var(--gold);border-radius:12px;padding:10px 13px;color:var(--gold2);font-weight:800;font-size:12px;text-decoration:none}
+.nav{display:flex;gap:7px;overflow:auto;padding:2px 0 12px;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav a{white-space:nowrap;text-decoration:none;color:#ddd;font-size:10px;font-weight:800;letter-spacing:.35px;border:1px solid rgba(202,150,36,.30);border-radius:999px;padding:8px 10px;background:#080a08}
+/* MASTER 001 — JĘZYK / LANGUAGE: kod i zachowanie zachowane 1:1 */
+.language-shell{position:relative;border:1px solid rgba(221,167,48,.8);border-radius:14px;background:linear-gradient(180deg,#0b0e0b,#050605);padding:10px;box-shadow:inset 0 0 18px rgba(196,139,21,.05),0 0 14px rgba(196,139,21,.07)}
+.language-row{display:grid;grid-template-columns:1fr auto;align-items:center;gap:10px}.label{font-size:12px;font-weight:900;letter-spacing:.8px;color:var(--gold2)}
+.lang-btn{appearance:none;border:1px solid var(--gold);background:#0b0d0b;color:#fff;border-radius:11px;min-height:42px;padding:8px 11px;display:flex;align-items:center;gap:8px;font-weight:800;font-size:13px;box-shadow:0 0 12px rgba(201,147,37,.10);cursor:pointer}.lang-btn .flag{font-size:21px}.chev{color:var(--gold2);font-size:12px;transition:.18s transform}.open .chev{transform:rotate(180deg)}
+.menu{position:absolute;z-index:50;left:10px;right:10px;top:calc(100% + 7px);display:none;background:rgba(7,9,7,.985);border:1px solid var(--gold);border-radius:14px;padding:7px;box-shadow:0 18px 45px rgba(0,0,0,.72),0 0 20px rgba(205,149,32,.12);max-height:56vh;overflow:auto}.open .menu{display:block}
+.opt{width:100%;border:0;border-bottom:1px solid rgba(218,165,45,.16);background:transparent;color:#fff;padding:11px 10px;display:flex;align-items:center;gap:11px;text-align:left;font-size:14px;cursor:pointer;border-radius:9px}.opt:last-child{border-bottom:0}.opt:active,.opt:hover{background:linear-gradient(90deg,rgba(36,235,89,.12),rgba(211,153,31,.06))}.opt .flag{font-size:23px;width:30px}.opt strong{font-weight:800}.opt small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+main{padding:14px 10px 24px}.section{border:1px solid rgba(207,155,45,.72);border-radius:16px;margin:0 0 10px;background:linear-gradient(180deg,rgba(10,14,10,.96),rgba(3,5,3,.98));overflow:hidden;box-shadow:inset 0 0 24px rgba(209,154,34,.025)}
+.hero{min-height:410px;padding:28px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 32%,rgba(36,97,42,.58),rgba(4,7,4,.97) 60%),linear-gradient(#071007,#020302)}.hero-mark{width:150px;height:150px;border:3px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-size:66px;background:#050705;box-shadow:0 0 32px rgba(200,146,31,.18)}.hero h1{font-size:39px;line-height:.95;margin:20px 0 8px}.hero h1 span{color:var(--gold2)}.hero h2{font-size:24px;color:#61db43;margin:7px 0}.hero p{margin:0;color:#d7d7cf;font-size:15px}.cta{margin-top:20px;background:linear-gradient(180deg,#42e86a,#18a644);border:0;border-radius:10px;padding:14px 24px;font-weight:900;color:#041307;min-width:230px}
+.section-head{padding:12px 14px 6px;text-align:center;font-weight:900;letter-spacing:.4px;font-size:17px}.section-head span{color:#66d64f}.sub{font-size:12px;color:var(--muted);text-align:center;padding:0 14px 12px}
+.product-main{padding:14px;min-height:240px;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center;background:radial-gradient(circle at 78% 45%,rgba(32,82,34,.45),transparent 42%)}.pellet-art{height:170px;border:1px solid rgba(200,148,31,.38);border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#16150d,#090b08);font-size:54px;position:relative}.pellet-art small{position:absolute;bottom:12px;font-size:10px;color:var(--gold2);font-weight:800}.product-copy h3{font-size:22px;margin:0 0 8px;color:var(--gold2)}.product-copy p{margin:0 0 5px;color:#ddd;font-size:12px;line-height:1.35}.spec{color:#79dc58!important;font-weight:800}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px}.card{min-height:145px;border:1px solid rgba(207,155,45,.58);border-radius:13px;background:linear-gradient(180deg,#0d120d,#050705);padding:13px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}.card::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 20%,rgba(51,116,48,.25),transparent 47%);pointer-events:none}.card-icon{font-size:42px;margin-bottom:auto;position:relative}.card h3{font-size:14px;margin:8px 0 3px;color:var(--gold2);position:relative}.card p{font-size:10px;line-height:1.35;color:#c9c9c2;margin:0;position:relative}.why .card{min-height:130px;justify-content:center;text-align:center}.why .card-icon{margin:0 auto 5px}
+.wide{padding:18px 16px;min-height:205px;background:linear-gradient(90deg,rgba(18,38,20,.95),rgba(5,8,5,.98));display:grid;grid-template-columns:1.1fr .9fr;gap:14px;align-items:center}.wide h3{margin:0 0 8px;font-size:20px;color:var(--gold2)}.wide p{font-size:12px;color:#d7d7cf;line-height:1.45;margin:0}.visual{min-height:155px;border:1px solid rgba(207,155,45,.45);border-radius:13px;display:grid;place-items:center;font-size:58px;background:radial-gradient(circle at 50% 45%,rgba(34,98,39,.36),#080a08 62%)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px}.split-card{min-height:210px;border:1px solid rgba(207,155,45,.58);border-radius:13px;padding:16px;background:radial-gradient(circle at 50% 25%,rgba(36,94,37,.32),#060806 62%);display:flex;flex-direction:column;justify-content:flex-end}.split-card .ico{font-size:48px;margin-bottom:auto}.split-card h3{margin:8px 0 5px;color:#66d64f;font-size:19px}.split-card p{font-size:11px;color:#d1d1ca;line-height:1.4;margin:0}
+.placeholder{padding:20px 16px;text-align:center;border-top:1px dashed rgba(207,155,45,.25)}.placeholder strong{display:block;color:var(--gold2);font-size:15px;margin-bottom:6px}.placeholder span{font-size:11px;color:#9f9f98}.contact{padding:18px 16px;display:flex;align-items:center;gap:12px}.contact-logo{width:74px;height:74px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold2);font-weight:900}.contact-copy{flex:1}.contact-copy h3{margin:0 0 6px;color:var(--gold2)}.contact-copy p{font-size:11px;color:#bbb;margin:0;line-height:1.45}
+.status{margin-top:12px;border:1px dashed rgba(207,155,45,.45);border-radius:13px;padding:13px;color:#d2d2c9;font-size:12px;line-height:1.45}.status b{color:var(--gold2)}
+@media(max-width:390px){.brand-title{font-size:17px}.logo{width:50px;height:50px}.language-row{grid-template-columns:1fr}.lang-btn{width:100%;justify-content:space-between}.hero h1{font-size:33px}.product-main,.wide{grid-template-columns:1fr}.cards,.split{grid-template-columns:1fr 1fr}.hero{min-height:390px}}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="top">
+  <div class="brand">
+    <div class="logo">L&M</div>
+    <div class="brand-title">TECHNIC <span>ENERGY</span></div>
+    <a class="shop" href="#produkty">SKLEP</a>
+  </div>
+  <nav class="nav" aria-label="Menu strony">
+    <a href="#oferta">OFERTA</a><a href="#produkty">PRODUKTY</a><a href="#magazyn">MAGAZYN</a><a href="#logistyka">LOGISTYKA</a><a href="#kontakt">KONTAKT</a>
+  </nav>
+  <section class="language-shell" id="langShell">
+    <div class="language-row">
+      <div class="label">JĘZYK / LANGUAGE</div>
+      <button class="lang-btn" id="langButton" type="button" aria-haspopup="listbox" aria-expanded="false">
+        <span class="flag" id="currentFlag">🇵🇱</span><span id="currentName">POLSKI</span><span class="chev">▼</span>
+      </button>
+    </div>
+    <div class="menu" id="langMenu" role="listbox" aria-label="Wybór języka">
+      <button class="opt" data-code="pl" data-flag="🇵🇱" data-name="POLSKI"><span class="flag">🇵🇱</span><span><strong>Polski</strong><small>Polska</small></span></button>
+      <button class="opt" data-code="de" data-flag="🇩🇪" data-name="DEUTSCH"><span class="flag">🇩🇪</span><span><strong>Deutsch</strong><small>Deutschland</small></span></button>
+      <button class="opt" data-code="cs" data-flag="🇨🇿" data-name="ČEŠTINA"><span class="flag">🇨🇿</span><span><strong>Čeština</strong><small>Česko</small></span></button>
+      <button class="opt" data-code="sk" data-flag="🇸🇰" data-name="SLOVENČINA"><span class="flag">🇸🇰</span><span><strong>Slovenčina</strong><small>Slovensko</small></span></button>
+      <button class="opt" data-code="de-AT" data-flag="🇦🇹" data-name="DEUTSCH (AT)"><span class="flag">🇦🇹</span><span><strong>Deutsch</strong><small>Österreich</small></span></button>
+      <button class="opt" data-code="de-CH" data-flag="🇨🇭" data-name="SCHWEIZ"><span class="flag">🇨🇭</span><span><strong>Deutsch / Français / Italiano</strong><small>Schweiz / Suisse / Svizzera</small></span></button>
+      <button class="opt" data-code="nl" data-flag="🇳🇱" data-name="NEDERLANDS"><span class="flag">🇳🇱</span><span><strong>Nederlands</strong><small>Nederland</small></span></button>
+      <button class="opt" data-code="be" data-flag="🇧🇪" data-name="BELGIË / BELGIQUE"><span class="flag">🇧🇪</span><span><strong>Nederlands / Français</strong><small>België / Belgique</small></span></button>
+      <button class="opt" data-code="lv" data-flag="🇱🇻" data-name="LATVIEŠU"><span class="flag">🇱🇻</span><span><strong>Latviešu</strong><small>Latvija</small></span></button>
+      <button class="opt" data-code="da" data-flag="🇩🇰" data-name="DANSK"><span class="flag">🇩🇰</span><span><strong>Dansk</strong><small>Danmark</small></span></button>
+      <button class="opt" data-code="en" data-flag="🇬🇧" data-name="ENGLISH"><span class="flag">🇬🇧</span><span><strong>English</strong><small>International</small></span></button>
+    </div>
+  </section>
+</header>
+<main>
+  <section class="section hero" id="oferta">
+    <div class="hero-mark">🌿🔥</div>
+    <h1>L&M <span>TECHNIC ENERGY</span></h1>
+    <h2>ENERGIA NATURY</h2>
+    <p>Pellet Premium A1 dla domu i biznesu</p>
+    <button class="cta" type="button" onclick="document.getElementById('produkty').scrollIntoView({behavior:'smooth'})">PRZEJDŹ DO PRODUKTÓW</button>
+  </section>
+
+  <section class="section" id="produkty">
+    <div class="section-head">PELLET DRZEWNY <span>PREMIUM A1</span></div>
+    <div class="sub">Szkielet sekcji produktowej — finalne zdjęcia i opisy do zatwierdzenia w kolejnych krokach.</div>
+    <div class="product-main">
+      <div class="product-copy"><h3>PALETA / WORKI 15 KG</h3><p class="spec">68 worków × 15 kg • 1 020 kg</p><p>Miejsce na zatwierdzony opis produktu i parametry handlowe.</p></div>
+      <div class="pellet-art">🪵<small>GRAFIKA MASTER PRODUKTU</small></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">OFERTA DOPASOWANA DO <span>TWOICH POTRZEB</span></div>
+    <div class="cards">
+      <div class="card"><div class="card-icon">🛍️</div><h3>WORKI 15 KG</h3><p>Indywidualny zakup i wygodne przechowywanie.</p></div>
+      <div class="card"><div class="card-icon">📦</div><h3>CAŁA PALETA</h3><p>68 worków × 15 kg — rozwiązanie na większy zapas.</p></div>
+      <div class="card"><div class="card-icon">⚪</div><h3>BIG BAG</h3><p>Duże opakowanie dla większych odbiorców.</p></div>
+      <div class="card"><div class="card-icon">⛰️</div><h3>PELLET LUZEM</h3><p>Dostawy dla większych instalacji i biznesu.</p></div>
+    </div>
+  </section>
+
+  <section class="section why">
+    <div class="section-head">DLACZEGO <span>L&M TECHNIC ENERGY?</span></div>
+    <div class="cards">
+      <div class="card"><div class="card-icon">🌿</div><h3>SPRAWDZONY SUROWIEC</h3><p>Miejsce na finalny opis.</p></div>
+      <div class="card"><div class="card-icon">🏅</div><h3>JAKOŚĆ PREMIUM A1</h3><p>Miejsce na finalny opis.</p></div>
+      <div class="card"><div class="card-icon">🔬</div><h3>KONTROLA JAKOŚCI</h3><p>Miejsce na finalny opis.</p></div>
+      <div class="card"><div class="card-icon">🚚</div><h3>TERMINOWA DOSTAWA</h3><p>Miejsce na finalny opis.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="logistyka">
+    <div class="wide"><div><h3>LOGISTYKA DOSTAW</h3><p>Docelowo: informacje o zasięgu dostaw, rynku polskim i europejskim, sposobie realizacji oraz przejściu do mapy dostaw.</p></div><div class="visual">🚛🌍</div></div>
+  </section>
+
+  <section class="section">
+    <div class="wide"><div><h3>JAKOŚĆ POTWIERDZONA BADANIAMI</h3><p>Docelowo: najważniejsze parametry pelletu oraz aktywne przejście do raportów i badań laboratoryjnych PDF.</p></div><div class="visual">🔬📄</div></div>
+  </section>
+
+  <section class="section" id="magazyn">
+    <div class="split">
+      <div class="split-card"><div class="ico">🏠</div><h3>DLA DOMU</h3><p>Sekcja potrzeb klienta indywidualnego, wygody, ciepła i oszczędności.</p></div>
+      <div class="split-card"><div class="ico">🏭</div><h3>DLA BIZNESU</h3><p>Sekcja dostaw większych ilości, niezawodności i logistyki dla firm.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">O <span>L&M TECHNIC ENERGY</span></div>
+    <div class="placeholder"><strong>HISTORIA FIRMY — DO WSTAWIENIA W KOLEJNYM KROKU</strong><span>Tu trafi zatwierdzony opis powstania firmy jako prawdziwy tekst HTML.</span></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">WIADOMOŚĆ <span>PREZESA</span></div>
+    <div class="placeholder"><strong>LIST / WIADOMOŚĆ PREZESA — DO WSTAWIENIA W KOLEJNYM KROKU</strong><span>Krótka wersja na stronę internetową, oparta na zatwierdzonym biznesplanie.</span></div>
+  </section>
+
+  <section class="section" id="kontakt">
+    <div class="contact"><div class="contact-logo">L&M</div><div class="contact-copy"><h3>SKONTAKTUJ SIĘ Z NAMI</h3><p>Docelowo: telefon, e-mail, lokalizacja oraz przejście do L&M AI DORADCA 24/7 po zatwierdzeniu odpowiedniego kroku.</p></div></div>
+  </section>
+
+  <div class="status"><b>KROK 2A — SZKIELET V2.</b> To osobna wersja robocza pod adresem <b>/v2/</b>. Główna strona oraz zamrożony MASTER 001 pozostają nietknięte. Na tym etapie oceniamy wyłącznie kolejność sekcji, proporcje, przewijanie i układ mobilny.</div>
+</main>
+</div>
+<script>
+(()=>{const shell=document.getElementById('langShell'),btn=document.getElementById('langButton'),flag=document.getElementById('currentFlag'),name=document.getElementById('currentName');
+function setOpen(v){shell.classList.toggle('open',v);btn.setAttribute('aria-expanded',String(v))}
+btn.addEventListener('click',e=>{e.stopPropagation();setOpen(!shell.classList.contains('open'))});
+document.querySelectorAll('.opt').forEach(o=>o.addEventListener('click',()=>{const x={code:o.dataset.code,flag:o.dataset.flag,name:o.dataset.name};flag.textContent=x.flag;name.textContent=x.name;document.documentElement.lang=x.code.split('-')[0];localStorage.setItem('lm-language',JSON.stringify(x));setOpen(false)}));
+document.addEventListener('click',e=>{if(!shell.contains(e.target))setOpen(false)});document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)});
+try{const x=JSON.parse(localStorage.getItem('lm-language'));if(x&&x.flag&&x.name){flag.textContent=x.flag;name.textContent=x.name;document.documentElement.lang=(x.code||'pl').split('-')[0]}}catch(e){}
+})();
+</script>
+</body>
+</html>
