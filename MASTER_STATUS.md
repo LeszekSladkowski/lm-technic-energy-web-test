@@ -17,12 +17,28 @@ Obowiązuje zatwierdzony nagłówek L&M Technic Energy, przycisk `SKLEP`, menu o
 ### MASTER 003 — HERO MULTILANGUAGE
 Status: **MASTER — BEZAPELACYJNIE ZATWIERDZONY I ZAMROŻONY**
 
-Obowiązuje HERO z aktywnym tekstem wielojęzycznym i grafiką `assets/HERO_MASTER_LM_TECHNIC_ENERGY.png`. Gałąź bezpieczeństwa: `MASTER-KROK-3B-HERO-MULTILANGUAGE`.
+Obowiązuje aktualny przetestowany HERO LIVE: czysta grafika `assets/HERO_VISUAL_MASTER_CLEAN.png` oraz żywe, zmienne językowo: tytuł, opis i CTA. Układ i sposób działania z zatwierdzonego stanu `c9e2ac3cfaca5b6d9be39c5edd85ec2e709bed59` są od tej chwili autorytatywne.
 
 ### MASTER 004 — PELLET DRZEWNY PREMIUM A1 MULTILANGUAGE
 Status: **MASTER — BEZAPELACYJNIE ZATWIERDZONY I ZAMROŻONY**
 
-Obowiązuje karta produktu z aktywnym tekstem wielojęzycznym i grafiką `PELLET_MASTER_PRODUCT.jpg`. MASTER 001–004 nie mogą być naruszane podczas dalszej budowy.
+Obowiązuje karta produktu z aktywnym tekstem wielojęzycznym i grafiką `PELLET_MASTER_PRODUCT.jpg`.
+
+### MASTER 005 — DZIAŁAJĄCA STRONA LIVE MULTILANGUAGE + OFERTA: WORKI 15 KG + BIG BAG
+Status: **MASTER — BEZWZGLĘDNIE ZATWIERDZONY I ZAMROŻONY 05.09.2026 PO TESTACH NA SAMSUNG GALAXY S24 ULTRA**
+
+Autorytatywny stan produkcyjny:
+- commit: `c9e2ac3cfaca5b6d9be39c5edd85ec2e709bed59`;
+- `index.html` blob SHA: `ed2761a85aabf85aeef6d97d55e8c3d95970c722`;
+- HERO: `assets/HERO_VISUAL_MASTER_CLEAN.png`;
+- WORKI 15 KG: `assets/WORKI_15KG_VISUAL_MASTER_CLEAN.png`;
+- BIG BAG: `assets/BIG_BAG_VISUAL_MASTER_CLEAN.png`;
+- silnik językowy działa dla PL, DE, CZ, SK, AT, CH, NL, BE, LV, DK i EN;
+- aktywnie zmieniają się: nagłówek/menu, HERO, CTA, karta produktu, nagłówek oferty, tytuły i opisy WORKI 15 KG oraz BIG BAG;
+- WORKI 15 KG i BIG BAG używają jednej wspólnej typografii HTML oraz czystych grafik produktowych jako osobnych obrazów;
+- obrazy są renderowane bez zoomowania, bez `background-position`, bez masek, bez overlayów i bez Base64.
+
+Ten stan jest od tej chwili wzorcem dla dalszej budowy. Każdy następny element ma być wyłącznie dokładany poniżej lub po aktualnym MASTER-ze, chyba że właściciel wyraźnie nakaże zmianę konkretnego zamrożonego elementu.
 
 ---
 
@@ -59,25 +75,33 @@ Przed czyszczeniem utworzono pełny punkt powrotu:
 
 Z aktywnej gałęzi `main` usunięto testowy KROK 5, jego stare aktywa i nieaktualne locki. Zachowano nienaruszone MASTER 001–004 oraz ich aktywa. W `index.html` pozostawiono czysty punkt montażowy `#buildRoot`, pod którym będą instalowane kolejne zatwierdzone sekcje.
 
-Właściciel projektu 05.09.2026 przetestował stronę na Samsung Galaxy S24 Ultra i potwierdził, że baza jest czysta: strona kończy się prawidłowo na zamrożonej karcie `PELLET DRZEWNY PREMIUM A1`, bez starego KROKU 5 i bez uszkodzonych kafli.
-
 Stan czystej bazy został dodatkowo zamrożony na gałęzi:
 `MASTER-CLEAN-BASE-2026-09-05`
 
 ---
 
-# STAŁY MASTER PUNKT SZYBKIEGO POWROTU 001
+# STAŁE MASTER PUNKTY SZYBKIEGO POWROTU
+
+## 001 — CZYSTA BAZA
+`MASTER-RETURN-POINT-001-CLEAN-BASE-2026-09-05`
+
+## 002 — HISTORYCZNY STAN PO WORKI 15 KG
+`MASTER-RETURN-POINT-002-WORKI-15KG-APPROVED-2026-09-05`
+
+## 003 — DZIAŁAJĄCA STRONA LIVE MULTILANGUAGE + WORKI 15 KG + BIG BAG
 Status: **BEZWZGLĘDNIE NIEZMIENNY / 100% PEWNY PUNKT POWROTU**
 
 Nazwa gałęzi:
-`MASTER-RETURN-POINT-001-CLEAN-BASE-2026-09-05`
+`MASTER-RETURN-POINT-003-LIVE-MULTILANGUAGE-OFFER-2026-09-05`
+
+Commit referencyjny:
+`c9e2ac3cfaca5b6d9be39c5edd85ec2e709bed59`
 
 Zasady:
-1. Ta gałąź po utworzeniu nie może być przesuwana, nadpisywana, kasowana ani używana do bieżącej pracy.
-2. Służy wyłącznie jako pewny, natychmiastowy punkt powrotu do zaakceptowanej i przetestowanej czystej bazy strony.
-3. W razie błędu w dalszej pracy można wrócić do niej bez odtwarzania wcześniejszych ustaleń i bez ryzyka dziedziczenia późniejszych błędów.
-4. Po każdym następnym **całym oknie**, które właściciel przetestuje i jednoznacznie zatwierdzi jako MASTER, tworzymy kolejny numerowany stały punkt powrotu: 002, 003, 004 itd.
-5. Każdy taki punkt ma być traktowany jako historyczny, nienaruszalny kamień milowy.
+1. Gałęzi 003 nie przesuwać, nie nadpisywać, nie kasować i nie używać do pracy roboczej.
+2. Służy jako natychmiastowy punkt powrotu do działającej i wizualnie zaakceptowanej strony po testach na Samsung Galaxy S24 Ultra.
+3. Zawiera działający silnik wielojęzyczny i zatwierdzony stan wizualny przez sekcję WORKI 15 KG + BIG BAG.
+4. Każdy następny zatwierdzony cały etap otrzymuje kolejny numerowany punkt powrotu.
 
 ---
 
