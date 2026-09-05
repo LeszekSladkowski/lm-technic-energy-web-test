@@ -1,0 +1,19 @@
+BIG BAG — GRAFIKA MASTER
+Data: 05.09.2026
+Status: BEZWZGLĘDNIE ZATWIERDZONA I ZAMROŻONA
+
+Obowiązujący oryginalny plik źródłowy:
+assets/premiumowy_big_bag_z_pelletem_drzewnym.png
+
+Docelowa ścieżka używana przez stronę:
+assets/BIG_BAG_MASTER_2026-09-05.png
+
+Zasada bezwzględna:
+- bez regenerowania;
+- bez konwersji;
+- bez kompresji;
+- bez kadrowania;
+- bez zmiany proporcji;
+- wyświetlanie width:100%; height:auto.
+
+Grafika zatwierdzona przez właściciela jako MASTER i nie może być samowolnie zmieniana.
