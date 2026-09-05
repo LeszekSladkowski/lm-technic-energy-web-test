@@ -64,7 +64,22 @@ Właściciel projektu 05.09.2026 przetestował stronę na Samsung Galaxy S24 Ult
 Stan czystej bazy został dodatkowo zamrożony na gałęzi:
 `MASTER-CLEAN-BASE-2026-09-05`
 
-Stary KROK 5 pozostaje dostępny wyłącznie w gałęzi backupowej i nie jest źródłem dalszej budowy.
+---
+
+# STAŁY MASTER PUNKT SZYBKIEGO POWROTU 001
+Status: **BEZWZGLĘDNIE NIEZMIENNY / 100% PEWNY PUNKT POWROTU**
+
+Nazwa gałęzi:
+`MASTER-RETURN-POINT-001-CLEAN-BASE-2026-09-05`
+
+Zasady:
+1. Ta gałąź po utworzeniu nie może być przesuwana, nadpisywana, kasowana ani używana do bieżącej pracy.
+2. Służy wyłącznie jako pewny, natychmiastowy punkt powrotu do zaakceptowanej i przetestowanej czystej bazy strony.
+3. W razie błędu w dalszej pracy można wrócić do niej bez odtwarzania wcześniejszych ustaleń i bez ryzyka dziedziczenia późniejszych błędów.
+4. Po każdym następnym **całym oknie**, które właściciel przetestuje i jednoznacznie zatwierdzi jako MASTER, tworzymy kolejny numerowany stały punkt powrotu: 002, 003, 004 itd.
+5. Każdy taki punkt ma być traktowany jako historyczny, nienaruszalny kamień milowy.
+
+---
 
 ## ZASADA PRODUKCYJNA
 `main` ma zawierać wyłącznie elementy działające i zatwierdzone albo bieżący pojedynczy element przeznaczony do testu. Nie przechowujemy w `main` porzuconych wariantów, błędnych assetów ani konkurencyjnych wersji tego samego kafla.
