@@ -1,0 +1,1 @@
+Nie używać małego testowego wariantu BIG BAG. Aktywny BIG_BAG_MASTER_2026-09-05.png ma odpowiadać oryginalnemu plikowi premiumowy_big_bag_z_pelletem_drzewnym.png.
