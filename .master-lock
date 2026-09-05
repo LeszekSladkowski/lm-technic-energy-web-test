@@ -8,6 +8,13 @@ LOCKED / DO NOT MODIFY WITHOUT EXPLICIT OWNER APPROVAL:
 - MASTER 004 — PELLET DRZEWNY PREMIUM A1 MULTILANGUAGE
 - MASTER MAPA DALSZEJ BUDOWY — 05.09.2026
 
+PERMANENT QUICK RETURN POINT:
+- MASTER-RETURN-POINT-001-CLEAN-BASE-2026-09-05
+- Status: BEZWZGLĘDNIE NIEZMIENNY / NIE PRZESUWAĆ / NIE NADPISYWAĆ / NIE UŻYWAĆ DO PRACY ROBOCZEJ
+- Purpose: pewny 100% punkt szybkiego powrotu do przetestowanej czystej bazy strony.
+
 BUILD POLICY:
-One section / one tile at a time. Test on Samsung Galaxy S24 Ultra. Freeze only after explicit owner approval.
+One section / one full window at a time. Test on Samsung Galaxy S24 Ultra. Freeze only after explicit owner approval.
+After every approved and fully tested next window, create the next numbered permanent return point.
+
 Backup before CLEAN START: BACKUP-PRZED-CLEAN-2026-09-05
