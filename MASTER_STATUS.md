@@ -40,6 +40,36 @@ Autorytatywny stan produkcyjny:
 
 Ten stan jest od tej chwili wzorcem dla dalszej budowy. Każdy następny element ma być wyłącznie dokładany poniżej lub po aktualnym MASTER-ze, chyba że właściciel wyraźnie nakaże zmianę konkretnego zamrożonego elementu.
 
+### MASTER 006 — PELET LUZEM LIVE MULTILANGUAGE
+Status: **MASTER — BEZWZGLĘDNIE ZATWIERDZONY I ZAMROŻONY**
+
+Obowiązuje zatwierdzony kafel PELET LUZEM z żywym tekstem wielojęzycznym oraz czystą grafiką `assets/PELET_LUZEM_VISUAL_MASTER_CLEAN.png`.
+
+### MASTER 007 — CAŁA STRONA LIVE DO KOŃCA OKNA 6 / KAFEL 2
+Status: **MASTER — 100% ZATWIERDZONY / BEZAPELACYJNIE ZAMROŻONY / BEZWZGLĘDNIE NIEZMIENNY**
+
+Po pełnym teście na Samsung Galaxy S24 Ultra właściciel projektu potwierdził idealne działanie całej aktualnej strony i nadał jej status MASTER.
+
+Autorytatywny zatwierdzony stan kodu strony:
+- commit strony: `9c74c3e3a2d8bcaef91a3fe6e6099070226b84d5`;
+- `index.html` blob SHA: `d4456c1002a99c5d119e5895a632f33899042adc`;
+- stały punkt powrotu: `MASTER-RETURN-POINT-006-OKNO-6-KAFEL-1-2-LIVE-MULTILANGUAGE-2026-09-05`.
+
+Zakres zamrożony obejmuje całą stronę od nagłówka do końca OKNA 6 / KAFEL 2, w szczególności:
+- pełny system językowy PL, DE, CZ, SK, AT, CH, NL, BE, LV, DK, EN;
+- HERO;
+- kartę PELLET DRZEWNY PREMIUM A1;
+- kompletną sekcję OFERTA: WORKI 15 KG, BIG BAG, PELET LUZEM, CAŁA PALETA 68 worków;
+- OKNO 6 z żywym wielojęzycznym tytułem i opisem;
+- KAFEL 1 `POTWIERDZONA JAKOŚĆ A1` z protokołem badań i parametrami;
+- KAFEL 2 `WYSOKA WYDAJNOŚĆ` z czystą grafiką `assets/OKNO_6_KAFEL_2_WYSOKA_WYDAJNOSC_MASTER_CLEAN.png` oraz żywym, wielojęzycznym tytułem, opisem i polami parametrów.
+
+Grafika KAFEL 2:
+- blob SHA: `e4d018df2f03dd5f5c8e9c7f6f4238cc7c7ed160`;
+- rozmiar: `1658006` B.
+
+Od tego miejsca dalsza budowa jest wyłącznie **FORWARD ONLY**. Żaden element MASTER 001–007 nie może zostać zmieniony bez jednoznacznej decyzji właściciela wskazującej konkretny element.
+
 ---
 
 # MASTER MAPA DALSZEJ BUDOWY — 05.09.2026
@@ -102,6 +132,25 @@ Zasady:
 2. Służy jako natychmiastowy punkt powrotu do działającej i wizualnie zaakceptowanej strony po testach na Samsung Galaxy S24 Ultra.
 3. Zawiera działający silnik wielojęzyczny i zatwierdzony stan wizualny przez sekcję WORKI 15 KG + BIG BAG.
 4. Każdy następny zatwierdzony cały etap otrzymuje kolejny numerowany punkt powrotu.
+
+## 004 — KOMPLETNA OFERTA LIVE MULTILANGUAGE
+`MASTER-RETURN-POINT-004-COMPLETE-OFFER-LIVE-MULTILANGUAGE-2026-09-05`
+
+## 005 — KOMPLETNE OKNO OFERTA — 4 KAFLE LIVE MULTILANGUAGE
+`MASTER-RETURN-POINT-005-COMPLETE-OFFER-4-CARDS-LIVE-MULTILANGUAGE-2026-09-05`
+
+## 006 — CAŁA STRONA DO KOŃCA OKNA 6 / KAFEL 2
+Status: **BEZWZGLĘDNIE NIEZMIENNY / 100% PEWNY PUNKT POWROTU**
+
+Nazwa gałęzi:
+`MASTER-RETURN-POINT-006-OKNO-6-KAFEL-1-2-LIVE-MULTILANGUAGE-2026-09-05`
+
+Zatwierdzony commit kodu strony:
+`9c74c3e3a2d8bcaef91a3fe6e6099070226b84d5`
+
+Zakres: cała aktualna strona, kompletna OFERTA oraz OKNO 6 z KAFLEM 1 i KAFLEM 2, przetestowane i zatwierdzone na Samsung Galaxy S24 Ultra.
+
+Gałęzi 006 nie wolno przesuwać, nadpisywać, kasować ani używać do pracy roboczej.
 
 ---
 
