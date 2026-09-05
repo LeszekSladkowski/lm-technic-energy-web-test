@@ -1,0 +1,22 @@
+PELET LUZEM — MASTER
+Data: 05.09.2026
+Status grafiki: BEZWZGLĘDNIE ZATWIERDZONA I ZAMROŻONA PRZEZ WŁAŚCICIELA
+
+KANONICZNY AKTYWNY ASSET:
+assets/PELET_LUZEM_VISUAL_MASTER_CLEAN.png
+Blob SHA: 031a7ecd683bff85116fcca59e4f85c24125fa46
+Rozmiar: 1494356 bytes
+
+ZASADA IMPLEMENTACJI:
+- grafika jest czystym elementem wizualnym bez tekstu językowego;
+- tytuł i oba opisy są żywym HTML;
+- tytuł używa dokładnie tej samej klasy .offer-item-title co WORKI 15 KG i BIG BAG;
+- opis używa tej samej klasy .offer-item-desc, a zielony akcent tej samej .desc-accent;
+- tekst PELET LUZEM jest podłączony do istniejącego silnika językowego PL, DE, CZ, SK, AT, CH, NL, BE, LV, DK, EN;
+- asset renderowany jako zwykły <img>, bez maski, overlayu, background-position, Base64 i bez regenerowania wcześniejszych MASTER-ów.
+
+Commit instalacyjny:
+cdbc262b4a63744ab813be5a241ff9295e995d99
+
+UWAGA:
+Grafika ma status MASTER. Po końcowym teście całego zainstalowanego kafla na Samsung Galaxy S24 Ultra zostanie utworzony kolejny stały punkt powrotu dla strony.
