@@ -1,19 +1,25 @@
-BIG BAG — GRAFIKA MASTER
+BIG BAG — MASTER LIVE
 Data: 05.09.2026
-Status: BEZWZGLĘDNIE ZATWIERDZONA I ZAMROŻONA
+Status: BEZWZGLĘDNIE ZATWIERDZONY I ZAMROŻONY
 
-Obowiązujący oryginalny plik źródłowy:
-assets/premiumowy_big_bag_z_pelletem_drzewnym.png
+Obowiązujący aktywny plik wizualny:
+assets/BIG_BAG_VISUAL_MASTER_CLEAN.png
 
-Docelowa ścieżka używana przez stronę:
-assets/BIG_BAG_MASTER_2026-09-05.png
+Blob SHA:
+c7f3d644c945c1d1fed2741e65bf0eea1337bda7
 
 Zasada bezwzględna:
-- bez regenerowania;
-- bez konwersji;
-- bez kompresji;
-- bez kadrowania;
-- bez zmiany proporcji;
-- wyświetlanie width:100%; height:auto.
+- grafika produktu jest osobnym czystym obrazem;
+- tytuł i opisy są żywym HTML i zmieniają się wraz z wybranym językiem;
+- wspólna typografia z WORKI 15 KG;
+- bez overlayów;
+- bez masek;
+- bez background-image i sztucznego kadrowania;
+- bez Base64 i składania z fragmentów;
+- renderowanie obrazu jako zwykłe <img> z width:100%; height:auto; object-fit:contain.
 
-Grafika zatwierdzona przez właściciela jako MASTER i nie może być samowolnie zmieniana.
+Autorytatywny stan produkcyjny:
+commit c9e2ac3cfaca5b6d9be39c5edd85ec2e709bed59
+return point MASTER-RETURN-POINT-003-LIVE-MULTILANGUAGE-OFFER-2026-09-05
+
+Nie wolno samowolnie zmieniać tego MASTER-a podczas budowy kolejnych sekcji.
