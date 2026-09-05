@@ -7,14 +7,15 @@ LOCKED / DO NOT MODIFY WITHOUT EXPLICIT OWNER APPROVAL:
 - MASTER 003 — HERO LIVE MULTILANGUAGE — CURRENT APPROVED IMPLEMENTATION
 - MASTER 004 — PELLET DRZEWNY PREMIUM A1 MULTILANGUAGE
 - MASTER 005 — LIVE MULTILANGUAGE + WORKI 15 KG + BIG BAG
+- MASTER 006 — PELET LUZEM — GRAFIKA MASTER + LIVE MULTILANGUAGE CARD INSTALLED
 - MASTER MAPA DALSZEJ BUDOWY — 05.09.2026
 
 CURRENT AUTHORITATIVE APPROVED STATE:
 - Tested on Samsung Galaxy S24 Ultra and explicitly approved by owner on 2026-09-05.
 - Canonical tested commit: c9e2ac3cfaca5b6d9be39c5edd85ec2e709bed59
-- Canonical index.html blob SHA: ed2761a85aabf85aeef6d97d55e8c3d95970c722
+- Canonical tested index.html blob SHA: ed2761a85aabf85aeef6d97d55e8c3d95970c722
 - Permanent return branch: MASTER-RETURN-POINT-003-LIVE-MULTILANGUAGE-OFFER-2026-09-05
-- If any older implementation note conflicts with this section, THIS CURRENT AUTHORITATIVE APPROVED STATE wins.
+- This remains the guaranteed whole-page return point until MASTER 006 post-install testing is explicitly confirmed by owner.
 
 MASTER 003 — HERO LIVE MULTILANGUAGE HARD LOCK:
 - Canonical visual asset: assets/HERO_VISUAL_MASTER_CLEAN.png
@@ -43,10 +44,24 @@ MASTER 005 — OFFER LIVE MULTILANGUAGE HARD LOCK:
 - NO background-image cropping, NO background-position tricks, NO zoom, NO masks, NO overlay text, NO Base64 assembly, NO multipart images, NO small JPG/WebP substitutes.
 - Do not modify WORKI or BIG BAG while adding the next offer card unless owner explicitly orders a change to the locked card.
 
+MASTER 006 — PELET LUZEM HARD LOCK:
+- Graphic explicitly approved by owner as MASTER before installation.
+- Canonical clean visual: assets/PELET_LUZEM_VISUAL_MASTER_CLEAN.png
+- Visual blob SHA: 031a7ecd683bff85116fcca59e4f85c24125fa46
+- Visual size: 1494356 bytes
+- Installation commit: cdbc262b4a63744ab813be5a241ff9295e995d99
+- PELET LUZEM title uses the exact same .offer-item-title class as WORKI 15 KG and BIG BAG.
+- Descriptions use the exact same .offer-item-desc and .desc-accent classes.
+- Title and descriptions are live HTML and MUST switch with selected language PL, DE, CZ, SK, AT, CH, NL, BE, LV, DK, EN.
+- Visual is rendered as a normal <img> from the canonical clean asset; no baked-in language copy is used as active page text.
+- NO overlay text, NO masks, NO background-image crop/position tricks, NO Base64 assembly, NO regeneration of prior MASTER elements.
+- Do not modify this approved graphic without explicit owner approval naming PELET LUZEM.
+- Whole installed page with MASTER 006 must still be visually tested on Samsung Galaxy S24 Ultra before creating the next permanent return point.
+
 LANGUAGE ENGINE HARD LOCK:
 - Approved languages: PL, DE, CZ, SK, AT, CH, NL, BE, LV, DK, EN.
 - Current language selection persistence and switching behavior are locked.
-- Header/menu, HERO title/subtitle/CTA, product title/spec, offer heading, WORKI title/description and BIG BAG title/descriptions must remain synchronized to selected language.
+- Header/menu, HERO title/subtitle/CTA, product title/spec, offer heading, WORKI title/description, BIG BAG title/descriptions and PELET LUZEM title/descriptions must remain synchronized to selected language.
 - Never solve a graphic problem by removing or freezing live multilingual text.
 
 PERMANENT QUICK RETURN POINTS:
