@@ -8,14 +8,16 @@ LOCKED / DO NOT MODIFY WITHOUT EXPLICIT OWNER APPROVAL:
 - MASTER 004 — PELLET DRZEWNY PREMIUM A1 MULTILANGUAGE
 - MASTER 005 — LIVE MULTILANGUAGE + WORKI 15 KG + BIG BAG
 - MASTER 006 — PELET LUZEM — GRAFIKA MASTER + LIVE MULTILANGUAGE CARD INSTALLED
+- MASTER 007 — CAŁA STRONA LIVE DO KOŃCA OKNA 6 / KAFEL 2
 - MASTER MAPA DALSZEJ BUDOWY — 05.09.2026
 
 CURRENT AUTHORITATIVE APPROVED STATE:
-- Tested on Samsung Galaxy S24 Ultra and explicitly approved by owner on 2026-09-05.
-- Canonical tested commit: c9e2ac3cfaca5b6d9be39c5edd85ec2e709bed59
-- Canonical tested index.html blob SHA: ed2761a85aabf85aeef6d97d55e8c3d95970c722
-- Permanent return branch: MASTER-RETURN-POINT-003-LIVE-MULTILANGUAGE-OFFER-2026-09-05
-- This remains the guaranteed whole-page return point until MASTER 006 post-install testing is explicitly confirmed by owner.
+- Entire current page explicitly approved by owner after Samsung Galaxy S24 Ultra testing on 2026-09-05.
+- Canonical approved website-code commit: 9c74c3e3a2d8bcaef91a3fe6e6099070226b84d5
+- Canonical approved index.html blob SHA: d4456c1002a99c5d119e5895a632f33899042adc
+- Permanent return branch: MASTER-RETURN-POINT-006-OKNO-6-KAFEL-1-2-LIVE-MULTILANGUAGE-2026-09-05
+- Frozen scope runs from the top of the page through the complete OKNO 6 / KAFEL 2.
+- Development remains FORWARD ONLY.
 
 MASTER 003 — HERO LIVE MULTILANGUAGE HARD LOCK:
 - Canonical visual asset: assets/HERO_VISUAL_MASTER_CLEAN.png
@@ -45,23 +47,35 @@ MASTER 005 — OFFER LIVE MULTILANGUAGE HARD LOCK:
 - Do not modify WORKI or BIG BAG while adding the next offer card unless owner explicitly orders a change to the locked card.
 
 MASTER 006 — PELET LUZEM HARD LOCK:
-- Graphic explicitly approved by owner as MASTER before installation.
 - Canonical clean visual: assets/PELET_LUZEM_VISUAL_MASTER_CLEAN.png
 - Visual blob SHA: 031a7ecd683bff85116fcca59e4f85c24125fa46
 - Visual size: 1494356 bytes
-- Installation commit: cdbc262b4a63744ab813be5a241ff9295e995d99
-- PELET LUZEM title uses the exact same .offer-item-title class as WORKI 15 KG and BIG BAG.
-- Descriptions use the exact same .offer-item-desc and .desc-accent classes.
-- Title and descriptions are live HTML and MUST switch with selected language PL, DE, CZ, SK, AT, CH, NL, BE, LV, DK, EN.
-- Visual is rendered as a normal <img> from the canonical clean asset; no baked-in language copy is used as active page text.
-- NO overlay text, NO masks, NO background-image crop/position tricks, NO Base64 assembly, NO regeneration of prior MASTER elements.
-- Do not modify this approved graphic without explicit owner approval naming PELET LUZEM.
-- Whole installed page with MASTER 006 must still be visually tested on Samsung Galaxy S24 Ultra before creating the next permanent return point.
+- PELET LUZEM title and descriptions are live HTML and MUST switch with selected language PL, DE, CZ, SK, AT, CH, NL, BE, LV, DK, EN.
+- Do not modify this approved graphic or live copy without explicit owner approval naming PELET LUZEM.
+
+COMPLETE OFFER HARD LOCK:
+- CAŁA PALETA visual: assets/paleta_68_worków_pelletu_l_m_technic.png
+- Visual blob SHA: 634234f3b6311a3a17822c5a0f3d81ec731e03cb
+- Visual size: 2474059 bytes
+- Full offer section consists of WORKI 15 KG, BIG BAG, PELET LUZEM and CAŁA PALETA.
+- All offer titles/descriptions remain live HTML and multilingual.
+- Permanent historical return branch: MASTER-RETURN-POINT-005-COMPLETE-OFFER-4-CARDS-LIVE-MULTILANGUAGE-2026-09-05
+
+MASTER 007 — WHOLE PAGE THROUGH OKNO 6 / KAFEL 2 HARD LOCK:
+- Whole current page approved as MASTER by owner after live test on Samsung Galaxy S24 Ultra.
+- OKNO 6 heading and subtitle are live HTML and multilingual.
+- KAFEL 1 `POTWIERDZONA JAKOŚĆ A1` is frozen with live title/description, laboratory protocol view and live metric labels.
+- KAFEL 2 `WYSOKA WYDAJNOŚĆ` is frozen with live title/description, three live metric fields and the approved clean visual.
+- KAFEL 2 canonical visual: assets/OKNO_6_KAFEL_2_WYSOKA_WYDAJNOSC_MASTER_CLEAN.png
+- KAFEL 2 visual blob SHA: e4d018df2f03dd5f5c8e9c7f6f4238cc7c7ed160
+- KAFEL 2 visual size: 1658006 bytes
+- PL, DE, CZ, SK, AT, CH, NL, BE, LV, DK and EN switching is part of the frozen behavior.
+- No already approved element may be regenerated, retyped into an image, cropped, resized by a new layout rule, or altered while adding later cards.
 
 LANGUAGE ENGINE HARD LOCK:
 - Approved languages: PL, DE, CZ, SK, AT, CH, NL, BE, LV, DK, EN.
 - Current language selection persistence and switching behavior are locked.
-- Header/menu, HERO title/subtitle/CTA, product title/spec, offer heading, WORKI title/description, BIG BAG title/descriptions and PELET LUZEM title/descriptions must remain synchronized to selected language.
+- Header/menu, HERO title/subtitle/CTA, product title/spec, complete OFFER section, OKNO 6 heading/subtitle, KAFEL 1 and KAFEL 2 live text must remain synchronized to selected language.
 - Never solve a graphic problem by removing or freezing live multilingual text.
 
 PERMANENT QUICK RETURN POINTS:
@@ -72,7 +86,13 @@ PERMANENT QUICK RETURN POINTS:
 - MASTER-RETURN-POINT-003-LIVE-MULTILANGUAGE-OFFER-2026-09-05
   Commit: c9e2ac3cfaca5b6d9be39c5edd85ec2e709bed59
   Status: BEZWZGLĘDNIE NIEZMIENNY / NIE PRZESUWAĆ / NIE NADPISYWAĆ / NIE UŻYWAĆ DO PRACY ROBOCZEJ
-  Purpose: 100% punkt powrotu do działającej strony LIVE Multilanguage przez WORKI 15 KG + BIG BAG, zatwierdzonej na Samsung Galaxy S24 Ultra.
+- MASTER-RETURN-POINT-004-COMPLETE-OFFER-LIVE-MULTILANGUAGE-2026-09-05
+  Status: BEZWZGLĘDNIE NIEZMIENNY / HISTORYCZNY PUNKT POWROTU
+- MASTER-RETURN-POINT-005-COMPLETE-OFFER-4-CARDS-LIVE-MULTILANGUAGE-2026-09-05
+  Status: BEZWZGLĘDNIE NIEZMIENNY / KOMPLETNA OFERTA
+- MASTER-RETURN-POINT-006-OKNO-6-KAFEL-1-2-LIVE-MULTILANGUAGE-2026-09-05
+  Website-code commit: 9c74c3e3a2d8bcaef91a3fe6e6099070226b84d5
+  Status: BEZWZGLĘDNIE NIEZMIENNY / CAŁA AKTUALNA STRONA DO KOŃCA OKNA 6 / KAFEL 2
 
 FORWARD-ONLY BUILD POLICY — OWNER STANDARD:
 1. One new element/card at a time.
