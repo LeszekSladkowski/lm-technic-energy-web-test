@@ -1,0 +1,35 @@
+L&M TECHNIC ENERGY — MASTER 006 FINAL FREEZE
+Date: 2026-09-05
+Status: 100% APPROVED / ABSOLUTELY FROZEN
+
+Owner explicitly confirmed after live Samsung Galaxy S24 Ultra testing that the complete current implementation works perfectly.
+
+Frozen scope:
+- MASTER 001 — language selector
+- MASTER 002 — header + language
+- MASTER 003 — HERO LIVE multilingual
+- MASTER 004 — PELLET DRZEWNY PREMIUM A1 multilingual
+- MASTER 005 — WORKI 15 KG + BIG BAG live multilingual
+- MASTER 006 — PELET LUZEM live multilingual
+- language engine PL, DE, CZ, SK, AT, CH, NL, BE, LV, DK, EN
+
+PELET LUZEM canonical visual:
+assets/PELET_LUZEM_VISUAL_MASTER_CLEAN.png
+Blob SHA: 031a7ecd683bff85116fcca59e4f85c24125fa46
+Size: 1494356 bytes
+
+Approved page-code installation commit:
+cdbc262b4a63744ab813be5a241ff9295e995d99
+Approved index.html blob SHA:
+11ad18235b1f4d479e50ccd5cf70da50b7c85d79
+
+Permanent return point to create from this finalized repository state:
+MASTER-RETURN-POINT-004-COMPLETE-OFFER-LIVE-MULTILANGUAGE-2026-09-05
+
+Rules:
+- do not modify any frozen element without explicit owner instruction naming that element;
+- do not regenerate approved graphics;
+- do not change typography or proportions of approved offer cards;
+- keep all visible copy live and synchronized with the selected language;
+- future work is additive only, below the frozen section;
+- development direction: FORWARD ONLY.
