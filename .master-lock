@@ -4,38 +4,60 @@ Updated: 2026-09-05
 LOCKED / DO NOT MODIFY WITHOUT EXPLICIT OWNER APPROVAL:
 - MASTER 001 — JĘZYK / LANGUAGE
 - MASTER 002 — NAGŁÓWEK + JĘZYK / LANGUAGE
-- MASTER 003 — HERO 1:1 — PEŁNY OBRAZ MASTER
-- MASTER 004 — PELLET DRZEWNY PREMIUM A1
+- MASTER 003 — HERO LIVE MULTILANGUAGE — CURRENT APPROVED IMPLEMENTATION
+- MASTER 004 — PELLET DRZEWNY PREMIUM A1 MULTILANGUAGE
+- MASTER 005 — LIVE MULTILANGUAGE + WORKI 15 KG + BIG BAG
 - MASTER MAPA DALSZEJ BUDOWY — 05.09.2026
 
-MASTER 003 — HERO HARD LOCK — AUTHORITATIVE RULE:
-- Authoritative visual mode: ONE COMPLETE HERO MASTER IMAGE displayed proportionally; do not split the approved graphic into image + rebuilt HTML copy.
-- Historical reference commit: 7319d1d0f4202cd91248c028ea9fdc0528e0bdf4
-- Canonical asset: assets/HERO_MASTER_LM_TECHNIC_ENERGY.png
-- HERO image SHA: 8a53bcf87e43c3d13b5106841774e01c01429864
-- HERO image size: 206824 bytes
-- Display: width:100%; height:auto; no cropping.
-- NEVER crop, split, rebuild, regenerate, replace, resize disproportionately, restyle or refactor HERO without explicit owner instruction naming HERO.
+CURRENT AUTHORITATIVE APPROVED STATE:
+- Tested on Samsung Galaxy S24 Ultra and explicitly approved by owner on 2026-09-05.
+- Canonical tested commit: c9e2ac3cfaca5b6d9be39c5edd85ec2e709bed59
+- Canonical index.html blob SHA: ed2761a85aabf85aeef6d97d55e8c3d95970c722
+- Permanent return branch: MASTER-RETURN-POINT-003-LIVE-MULTILANGUAGE-OFFER-2026-09-05
+- If any older implementation note conflicts with this section, THIS CURRENT AUTHORITATIVE APPROVED STATE wins.
 
-OFFER CARDS — CLEAN RASTER POLICY:
-- NO overlays, masks, replacement HTML titles, Base64 assembly, multipart image loading, small JPG/WebP substitutes or visual patches.
-- Every offer card must be one complete high-resolution raster asset rendered directly with width:100%; max-width:100%; height:auto; no crop and no distortion.
-- WORKI 15 KG canonical full-resolution asset: assets/worki_15_kg_premium_energia_drzewna.png
-- WORKI 15 KG blob SHA: c97118493b49fe84b8f4a1c008ac4f7e49d45663
-- WORKI 15 KG file size: 1678113 bytes; source dimensions: 2172×724 px.
-- BIG BAG canonical full-resolution asset: assets/BIG_BAG_MASTER_2026-09-05.png
-- BIG BAG blob SHA: 75fddfd98e628571741729de044d1816dea6a600
-- BIG BAG file size: 2012531 bytes; source dimensions: 1536×1024 px.
-- BIG BAG final visual window is NOT frozen yet; owner must approve the clean raster rendering on Samsung Galaxy S24 Ultra.
-- If BIG BAG typography requires correction, correct the complete raster asset itself and replace it as a complete image; NEVER overlay text in HTML/CSS.
+MASTER 003 — HERO LIVE MULTILANGUAGE HARD LOCK:
+- Canonical visual asset: assets/HERO_VISUAL_MASTER_CLEAN.png
+- Asset blob SHA: 3788ec2273077fbd8713a794d8d5b54be90fd1be
+- Asset size: 366291 bytes
+- HERO consists of clean visual image plus live HTML title, subtitle and CTA.
+- Title, subtitle and CTA MUST remain live and switch with selected language.
+- Do not bake language text into the active HERO raster.
+- Do not crop, zoom, regenerate, mask, overlay or replace the approved HERO visual without explicit owner approval naming HERO.
+
+MASTER 004 — PELLET DRZEWNY PREMIUM A1:
+- Keep current approved product card layout and live multilingual title/specification.
+- Canonical product image remains PELLET_MASTER_PRODUCT.jpg.
+- Do not alter this card while adding later sections unless owner explicitly orders a change to this card.
+
+MASTER 005 — OFFER LIVE MULTILANGUAGE HARD LOCK:
+- WORKI 15 KG canonical clean visual: assets/WORKI_15KG_VISUAL_MASTER_CLEAN.png
+- WORKI visual blob SHA: c53a7ca7d52fc6a16f5ba1caf900f7e7639272c5
+- WORKI visual size: 947123 bytes
+- BIG BAG canonical clean visual: assets/BIG_BAG_VISUAL_MASTER_CLEAN.png
+- BIG BAG visual blob SHA: c7f3d644c945c1d1fed2741e65bf0eea1337bda7
+- BIG BAG visual size: 1241918 bytes
+- WORKI and BIG BAG titles/descriptions are live HTML text and MUST switch with selected language.
+- WORKI and BIG BAG use the same shared typography class and approved proportions.
+- Product visuals are rendered as ordinary <img> elements with width:100%; height:auto; object-fit:contain.
+- NO background-image cropping, NO background-position tricks, NO zoom, NO masks, NO overlay text, NO Base64 assembly, NO multipart images, NO small JPG/WebP substitutes.
+- Do not modify WORKI or BIG BAG while adding the next offer card unless owner explicitly orders a change to the locked card.
+
+LANGUAGE ENGINE HARD LOCK:
+- Approved languages: PL, DE, CZ, SK, AT, CH, NL, BE, LV, DK, EN.
+- Current language selection persistence and switching behavior are locked.
+- Header/menu, HERO title/subtitle/CTA, product title/spec, offer heading, WORKI title/description and BIG BAG title/descriptions must remain synchronized to selected language.
+- Never solve a graphic problem by removing or freezing live multilingual text.
 
 PERMANENT QUICK RETURN POINTS:
 - MASTER-RETURN-POINT-001-CLEAN-BASE-2026-09-05
   Status: BEZWZGLĘDNIE NIEZMIENNY / NIE PRZESUWAĆ / NIE NADPISYWAĆ / NIE UŻYWAĆ DO PRACY ROBOCZEJ
-  Purpose: pewny 100% punkt szybkiego powrotu do przetestowanej czystej bazy strony.
 - MASTER-RETURN-POINT-002-WORKI-15KG-APPROVED-2026-09-05
   Status: BEZWZGLĘDNIE NIEZMIENNY / NIE PRZESUWAĆ / NIE NADPISYWAĆ / NIE UŻYWAĆ DO PRACY ROBOCZEJ
-  Purpose: historyczny zatwierdzony stan przez WORKI 15 KG.
+- MASTER-RETURN-POINT-003-LIVE-MULTILANGUAGE-OFFER-2026-09-05
+  Commit: c9e2ac3cfaca5b6d9be39c5edd85ec2e709bed59
+  Status: BEZWZGLĘDNIE NIEZMIENNY / NIE PRZESUWAĆ / NIE NADPISYWAĆ / NIE UŻYWAĆ DO PRACY ROBOCZEJ
+  Purpose: 100% punkt powrotu do działającej strony LIVE Multilanguage przez WORKI 15 KG + BIG BAG, zatwierdzonej na Samsung Galaxy S24 Ultra.
 
 FORWARD-ONLY BUILD POLICY — OWNER STANDARD:
 1. One new element/card at a time.
