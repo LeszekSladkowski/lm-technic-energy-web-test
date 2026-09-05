@@ -8,13 +8,40 @@ LOCKED / DO NOT MODIFY WITHOUT EXPLICIT OWNER APPROVAL:
 - MASTER 004 — PELLET DRZEWNY PREMIUM A1 MULTILANGUAGE
 - MASTER MAPA DALSZEJ BUDOWY — 05.09.2026
 
-PERMANENT QUICK RETURN POINT:
-- MASTER-RETURN-POINT-001-CLEAN-BASE-2026-09-05
-- Status: BEZWZGLĘDNIE NIEZMIENNY / NIE PRZESUWAĆ / NIE NADPISYWAĆ / NIE UŻYWAĆ DO PRACY ROBOCZEJ
-- Purpose: pewny 100% punkt szybkiego powrotu do przetestowanej czystej bazy strony.
+MASTER 003 — HERO HARD LOCK:
+- Reference branch: MASTER-KROK-3B-HERO-MULTILANGUAGE
+- Reference commit: c195157fe60d7a64fd193022479d4031979b98c4
+- HERO image SHA: 8a53bcf87e43c3d13b5106841774e01c01429864
+- HERO image size: 206824 bytes
+- Protected selectors: .hero-master, .hero-card, .hero-visual, .hero-visual img, .hero-copy, .hero-title, .hero-subtitle, .hero-cta, .hero-cta .cta-arrow
+- Protected markup: section.hero-master and all descendants
+- Rule: NEVER regenerate, replace, resize, restyle, crop, rewrite or refactor HERO without explicit owner instruction naming HERO.
 
-BUILD POLICY:
-One section / one full window at a time. Test on Samsung Galaxy S24 Ultra. Freeze only after explicit owner approval.
-After every approved and fully tested next window, create the next numbered permanent return point.
+APPROVED OFFER CARD ASSET LOCKS:
+- WORKI 15 KG — approved MASTER; permanent return point: MASTER-RETURN-POINT-002-WORKI-15KG-APPROVED-2026-09-05
+- BIG BAG — approved MASTER graphic; canonical asset path: assets/BIG_BAG_MASTER_2026-09-05.png
+- BIG BAG canonical blob SHA: 75fddfd98e628571741729de044d1816dea6a600
+- BIG BAG canonical size: 2012531 bytes
+- Rule: never regenerate or substitute approved offer-card graphics. New work may only be added after the latest approved card.
+
+PERMANENT QUICK RETURN POINTS:
+- MASTER-RETURN-POINT-001-CLEAN-BASE-2026-09-05
+  Status: BEZWZGLĘDNIE NIEZMIENNY / NIE PRZESUWAĆ / NIE NADPISYWAĆ / NIE UŻYWAĆ DO PRACY ROBOCZEJ
+  Purpose: pewny 100% punkt szybkiego powrotu do przetestowanej czystej bazy strony.
+- MASTER-RETURN-POINT-002-WORKI-15KG-APPROVED-2026-09-05
+  Status: BEZWZGLĘDNIE NIEZMIENNY / NIE PRZESUWAĆ / NIE NADPISYWAĆ / NIE UŻYWAĆ DO PRACY ROBOCZEJ
+  Purpose: zatwierdzony stan przez WORKI 15 KG.
+
+FORWARD-ONLY BUILD POLICY — OWNER STANDARD:
+1. One new element/card at a time.
+2. Build it once with maximum accuracy.
+3. Test visually on Samsung Galaxy S24 Ultra.
+4. After explicit owner approval, mark the element MASTER and treat it as immutable forever.
+5. Every later change must be additive and below/after the latest approved element unless the owner explicitly orders otherwise.
+6. Before every write to index.html, compare the planned diff against all locked selectors/markup. If a locked MASTER would change, ABORT the write.
+7. Never regenerate an already approved graphic to solve an unrelated problem.
+8. Never perform broad refactors, formatting rewrites, CSS consolidation or cleanup that can touch locked MASTER sections.
+9. After every approved and fully tested complete window/section, create the next numbered permanent return point.
+10. Development direction is FORWARD ONLY: completed MASTER -> new topic -> new MASTER.
 
 Backup before CLEAN START: BACKUP-PRZED-CLEAN-2026-09-05
