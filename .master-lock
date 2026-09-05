@@ -4,25 +4,29 @@ Updated: 2026-09-05
 LOCKED / DO NOT MODIFY WITHOUT EXPLICIT OWNER APPROVAL:
 - MASTER 001 — JĘZYK / LANGUAGE
 - MASTER 002 — NAGŁÓWEK + JĘZYK / LANGUAGE
-- MASTER 003 — HERO MULTILANGUAGE
-- MASTER 004 — PELLET DRZEWNY PREMIUM A1 MULTILANGUAGE
+- MASTER 003 — HERO 1:1 — PEŁNY OBRAZ MASTER
+- MASTER 004 — PELLET DRZEWNY PREMIUM A1
 - MASTER MAPA DALSZEJ BUDOWY — 05.09.2026
 
-MASTER 003 — HERO HARD LOCK:
-- Reference branch: MASTER-KROK-3B-HERO-MULTILANGUAGE
-- Reference commit: c195157fe60d7a64fd193022479d4031979b98c4
+MASTER 003 — HERO HARD LOCK — CORRECTED AUTHORITATIVE RULE:
+- Authoritative visual mode: ONE COMPLETE HERO MASTER IMAGE displayed 1:1 proportionally; do not split the approved graphic into image + rebuilt HTML copy.
+- Historical reference commit for the correct uploaded HERO MASTER PNG: 7319d1d0f4202cd91248c028ea9fdc0528e0bdf4
+- Historical commit message: KROK 3: connect uploaded HERO MASTER PNG below frozen MASTER 002
+- Canonical asset: assets/HERO_MASTER_LM_TECHNIC_ENERGY.png
 - HERO image SHA: 8a53bcf87e43c3d13b5106841774e01c01429864
 - HERO image size: 206824 bytes
-- Protected selectors: .hero-master, .hero-card, .hero-visual, .hero-visual img, .hero-copy, .hero-title, .hero-subtitle, .hero-cta, .hero-cta .cta-arrow
-- Protected markup: section.hero-master and all descendants
-- Rule: NEVER regenerate, replace, resize, restyle, crop, rewrite or refactor HERO without explicit owner instruction naming HERO.
+- Correct display principle from the historical reference: width:100%; height:auto; no cropping; one complete graphic inside the approved hero frame.
+- Rule: NEVER crop, split, rebuild, regenerate, replace, resize disproportionately, restyle or refactor HERO without explicit owner instruction naming HERO.
+- The later KROK 3B split-image/live-HTML presentation is NOT the authoritative visual reference for the frozen HERO layout.
 
 APPROVED OFFER CARD ASSET LOCKS:
 - WORKI 15 KG — approved MASTER; permanent return point: MASTER-RETURN-POINT-002-WORKI-15KG-APPROVED-2026-09-05
-- BIG BAG — approved MASTER graphic; canonical asset path: assets/BIG_BAG_MASTER_2026-09-05.png
+- BIG BAG — approved graphic asset, but final visual window is NOT frozen yet until owner approves the corrected title typography on Samsung Galaxy S24 Ultra.
+- BIG BAG canonical asset path: assets/BIG_BAG_MASTER_2026-09-05.png
 - BIG BAG canonical blob SHA: 75fddfd98e628571741729de044d1816dea6a600
 - BIG BAG canonical size: 2012531 bytes
-- Rule: never regenerate or substitute approved offer-card graphics. New work may only be added after the latest approved card.
+- Critical typography rule for offer cards: titles must use one consistent condensed bold visual family and one consistent optical size, aligned to the approved WORKI 15 KG title standard.
+- Rule: never regenerate or substitute approved offer-card graphics to solve unrelated problems. New work may only be added after the latest approved card.
 
 PERMANENT QUICK RETURN POINTS:
 - MASTER-RETURN-POINT-001-CLEAN-BASE-2026-09-05
@@ -38,7 +42,7 @@ FORWARD-ONLY BUILD POLICY — OWNER STANDARD:
 3. Test visually on Samsung Galaxy S24 Ultra.
 4. After explicit owner approval, mark the element MASTER and treat it as immutable forever.
 5. Every later change must be additive and below/after the latest approved element unless the owner explicitly orders otherwise.
-6. Before every write to index.html, compare the planned diff against all locked selectors/markup. If a locked MASTER would change, ABORT the write.
+6. Before every write to index.html, compare the planned diff against all locked MASTER elements. If an unrelated locked MASTER would change, ABORT the write.
 7. Never regenerate an already approved graphic to solve an unrelated problem.
 8. Never perform broad refactors, formatting rewrites, CSS consolidation or cleanup that can touch locked MASTER sections.
 9. After every approved and fully tested complete window/section, create the next numbered permanent return point.
