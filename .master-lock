@@ -8,25 +8,26 @@ LOCKED / DO NOT MODIFY WITHOUT EXPLICIT OWNER APPROVAL:
 - MASTER 004 — PELLET DRZEWNY PREMIUM A1
 - MASTER MAPA DALSZEJ BUDOWY — 05.09.2026
 
-MASTER 003 — HERO HARD LOCK — CORRECTED AUTHORITATIVE RULE:
-- Authoritative visual mode: ONE COMPLETE HERO MASTER IMAGE displayed 1:1 proportionally; do not split the approved graphic into image + rebuilt HTML copy.
-- Historical reference commit for the correct uploaded HERO MASTER PNG: 7319d1d0f4202cd91248c028ea9fdc0528e0bdf4
-- Historical commit message: KROK 3: connect uploaded HERO MASTER PNG below frozen MASTER 002
+MASTER 003 — HERO HARD LOCK — AUTHORITATIVE RULE:
+- Authoritative visual mode: ONE COMPLETE HERO MASTER IMAGE displayed proportionally; do not split the approved graphic into image + rebuilt HTML copy.
+- Historical reference commit: 7319d1d0f4202cd91248c028ea9fdc0528e0bdf4
 - Canonical asset: assets/HERO_MASTER_LM_TECHNIC_ENERGY.png
 - HERO image SHA: 8a53bcf87e43c3d13b5106841774e01c01429864
 - HERO image size: 206824 bytes
-- Correct display principle from the historical reference: width:100%; height:auto; no cropping; one complete graphic inside the approved hero frame.
-- Rule: NEVER crop, split, rebuild, regenerate, replace, resize disproportionately, restyle or refactor HERO without explicit owner instruction naming HERO.
-- The later KROK 3B split-image/live-HTML presentation is NOT the authoritative visual reference for the frozen HERO layout.
+- Display: width:100%; height:auto; no cropping.
+- NEVER crop, split, rebuild, regenerate, replace, resize disproportionately, restyle or refactor HERO without explicit owner instruction naming HERO.
 
-APPROVED OFFER CARD ASSET LOCKS:
-- WORKI 15 KG — approved MASTER; permanent return point: MASTER-RETURN-POINT-002-WORKI-15KG-APPROVED-2026-09-05
-- BIG BAG — approved graphic asset, but final visual window is NOT frozen yet until owner approves the corrected title typography on Samsung Galaxy S24 Ultra.
-- BIG BAG canonical asset path: assets/BIG_BAG_MASTER_2026-09-05.png
-- BIG BAG canonical blob SHA: 75fddfd98e628571741729de044d1816dea6a600
-- BIG BAG canonical size: 2012531 bytes
-- Critical typography rule for offer cards: titles must use one consistent condensed bold visual family and one consistent optical size, aligned to the approved WORKI 15 KG title standard.
-- Rule: never regenerate or substitute approved offer-card graphics to solve unrelated problems. New work may only be added after the latest approved card.
+OFFER CARDS — CLEAN RASTER POLICY:
+- NO overlays, masks, replacement HTML titles, Base64 assembly, multipart image loading, small JPG/WebP substitutes or visual patches.
+- Every offer card must be one complete high-resolution raster asset rendered directly with width:100%; max-width:100%; height:auto; no crop and no distortion.
+- WORKI 15 KG canonical full-resolution asset: assets/worki_15_kg_premium_energia_drzewna.png
+- WORKI 15 KG blob SHA: c97118493b49fe84b8f4a1c008ac4f7e49d45663
+- WORKI 15 KG file size: 1678113 bytes; source dimensions: 2172×724 px.
+- BIG BAG canonical full-resolution asset: assets/BIG_BAG_MASTER_2026-09-05.png
+- BIG BAG blob SHA: 75fddfd98e628571741729de044d1816dea6a600
+- BIG BAG file size: 2012531 bytes; source dimensions: 1536×1024 px.
+- BIG BAG final visual window is NOT frozen yet; owner must approve the clean raster rendering on Samsung Galaxy S24 Ultra.
+- If BIG BAG typography requires correction, correct the complete raster asset itself and replace it as a complete image; NEVER overlay text in HTML/CSS.
 
 PERMANENT QUICK RETURN POINTS:
 - MASTER-RETURN-POINT-001-CLEAN-BASE-2026-09-05
@@ -34,7 +35,7 @@ PERMANENT QUICK RETURN POINTS:
   Purpose: pewny 100% punkt szybkiego powrotu do przetestowanej czystej bazy strony.
 - MASTER-RETURN-POINT-002-WORKI-15KG-APPROVED-2026-09-05
   Status: BEZWZGLĘDNIE NIEZMIENNY / NIE PRZESUWAĆ / NIE NADPISYWAĆ / NIE UŻYWAĆ DO PRACY ROBOCZEJ
-  Purpose: zatwierdzony stan przez WORKI 15 KG.
+  Purpose: historyczny zatwierdzony stan przez WORKI 15 KG.
 
 FORWARD-ONLY BUILD POLICY — OWNER STANDARD:
 1. One new element/card at a time.
