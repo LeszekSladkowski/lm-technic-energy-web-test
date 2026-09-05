@@ -1,0 +1,1 @@
+Instalacja BIG BAG MASTER: strona ma używać assets/BIG_BAG_MASTER_2026-09-05.png, który musi wskazywać na oryginalny blob wgranego pliku premiumowy_big_bag_z_pelletem_drzewnym.png. Bez zmian w index.html poza istniejącym już odwołaniem. Test na Samsung Galaxy S24 Ultra wymagany przed kolejnym punktem powrotu.
