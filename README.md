@@ -1,49 +1,69 @@
 # L&M Technic Energy — WEB
 
-## Status projektu — 05.09.2026
+## Status projektu — 06.09.2026
 
-Aktywna strona internetowa L&M Technic Energy jest budowana metodą **FORWARD ONLY**: jeden element → test na Samsung Galaxy S24 Ultra → zatwierdzenie MASTER → zamrożenie → następny element.
+Strona L&M Technic Energy jest budowana metodą **FORWARD ONLY**:
 
-## Aktualny obowiązujący MASTER
+**jeden element → test na Samsung Galaxy S24 Ultra → zatwierdzenie MASTER → zamrożenie → następny element.**
 
-### MASTER 005 — LIVE MULTILANGUAGE + WORKI 15 KG + BIG BAG
-Status: **BEZWZGLĘDNIE ZATWIERDZONY I ZAMROŻONY**
+## Aktualny zatwierdzony MASTER
 
-Autorytatywny działający stan strony:
-`c9e2ac3cfaca5b6d9be39c5edd85ec2e709bed59`
+Cała strona od początku do końca **OKNA 8 „PEWNY PARTNER”** jest zatwierdzona i zamrożona.
 
-Stały punkt powrotu:
-`MASTER-RETURN-POINT-003-LIVE-MULTILANGUAGE-OFFER-2026-09-05`
+- zatwierdzony commit strony: `d2d61a3ebed80ed364f5c71d954307dfc224a26b`
+- zatwierdzony `index.html` blob SHA: `c292a50a049f9d38744992d03f38edd8c3f2305f`
+- stały punkt powrotu: `MASTER-RETURN-POINT-008-OKNO-8-PEWNY-PARTNER-COMPLETE-LIVE-MULTILANGUAGE-2026-09-06`
 
-W tym stanie działają i są zamrożone:
+Zakres zamrożony obejmuje m.in.:
 - JĘZYK / LANGUAGE — PL, DE, CZ, SK, AT, CH, NL, BE, LV, DK, EN;
 - nagłówek i menu;
-- HERO LIVE z żywym wielojęzycznym tytułem, opisem i CTA;
-- karta PELLET DRZEWNY PREMIUM A1 z żywym tekstem;
-- sekcja OFERTA;
-- WORKI 15 KG — żywy tekst + czysta grafika;
-- BIG BAG — żywy tekst + czysta grafika.
+- HERO LIVE;
+- PELLET DRZEWNY PREMIUM A1;
+- OFERTA: WORKI 15 KG, BIG BAG, PELET LUZEM, CAŁA PALETA;
+- OKNO 6 — jakość / wydajność / ekologiczne ciepło;
+- OKNO 7 — TERMINOWA LOGISTYKA;
+- OKNO 8 — PEWNY PARTNER + LIST PREZESA.
 
-Aktywne grafiki produkcyjne w `assets`:
+## Aktualna praca na `main`
+
+**OKNO 9 „KONTAKT”** jest bieżącym elementem FORWARD ONLY na `main` i nie należy do zakresu zamrożonego, dopóki właściciel nie zatwierdzi go po teście na Samsung Galaxy S24 Ultra.
+
+Podczas pracy nad OKNEM 9 i kolejnymi sekcjami nie wolno zmieniać żadnego elementu zatwierdzonego do końca OKNA 8.
+
+## Aktywne grafiki produkcyjne
+
+W `assets/` pozostają wyłącznie grafiki używane przez bieżącą stronę lub stanowiące zatwierdzone aktywa MASTER:
+
 - `HERO_VISUAL_MASTER_CLEAN.png`
 - `WORKI_15KG_VISUAL_MASTER_CLEAN.png`
 - `BIG_BAG_VISUAL_MASTER_CLEAN.png`
+- `PELET_LUZEM_VISUAL_MASTER_CLEAN.png`
+- `paleta_68_worków_pelletu_l_m_technic.png`
+- `a_tall_vertical_glossy_promotional_poster_websit.png` — źródło widoku protokołu badań
+- `OKNO_6_KAFEL_2_WYSOKA_WYDAJNOSC_MASTER_CLEAN.png`
+- `OKNO_6_KAFEL_3_EKOLOGICZNE_CIEPLO_MASTER_CLEAN.png`
+- `OKNO_7_KAFEL_1_TRANSPORT_CIEZAROWY_MASTER_CLEAN.png`
+- `OKNO_7_KAFEL_2_DOSTAWA_DO_KLIENTA_MASTER_CLEAN.png`
+- `OKNO_8_KAFEL_1_PEWNY_PARTNER_MASTER_CLEAN.png`
+- `OKNO_8_KAFEL_2_LIST_PREZESA_MASTER_CLEAN.png`
+- `OKNO_9_KONTAKT_MASTER_CLEAN.png` — bieżący element roboczy
 
-## MASTER-y historyczne i punkty bezpieczeństwa
+Dodatkowo główna karta produktu korzysta z `PELLET_MASTER_PRODUCT.jpg` w katalogu głównym.
 
-Nie wolno usuwać, przesuwać ani wykorzystywać jako gałęzi roboczych:
-- `MASTER-RETURN-POINT-001-CLEAN-BASE-2026-09-05`
-- `MASTER-RETURN-POINT-002-WORKI-15KG-APPROVED-2026-09-05`
-- `MASTER-RETURN-POINT-003-LIVE-MULTILANGUAGE-OFFER-2026-09-05`
-- `MASTER-KROK-1-JEZYK-LANGUAGE`
-- `MASTER-KROK-2-NAGLOWEK-LANGUAGE`
-- `MASTER-KROK-3B-HERO-MULTILANGUAGE`
-- `MASTER-KROK-4-PELLET-MULTILANGUAGE`
-- `MASTER-CLEAN-BASE-2026-09-05`
-- `BACKUP-PRZED-CLEAN-2026-09-05`
+## GitHub Actions / wdrożenie
+
+Na `main` nie ma własnych plików `.github/workflows/` ani tymczasowych instalatorów chirurgicznych. Wdrożenie strony realizuje standardowy mechanizm **GitHub Pages — pages build and deployment**.
+
+Stare czerwone uruchomienia Actions pozostają jedynie historycznymi zapisami wcześniejszych workflow i nie opisują obecnego drzewa repozytorium.
+
+## Punkty bezpieczeństwa
+
+Nie wolno kasować ani przesuwać gałęzi MASTER / RETURN POINT oraz wskazanych backupów. Najnowszy obowiązujący punkt powrotu to:
+
+`MASTER-RETURN-POINT-008-OKNO-8-PEWNY-PARTNER-COMPLETE-LIVE-MULTILANGUAGE-2026-09-06`
+
+Pełne zasady zamrożenia znajdują się w `.master-lock`, a historia zatwierdzonych etapów w `MASTER_STATUS.md` i plikach `MASTER_RETURN_POINT_*`.
 
 ## Zasada produkcyjna
 
-`main` ma zawierać wyłącznie bieżący działający MASTER i pojedynczy nowy element w trakcie testu. Nie przechowujemy w `main` starych wariantów grafik, plików testowych, duplikatów ani porzuconych eksperymentów.
-
-Dalsza budowa odbywa się wyłącznie poniżej / po ostatnim zamrożonym MASTER-ze, chyba że właściciel projektu wyraźnie nakaże zmianę konkretnego zamrożonego elementu.
+`main` ma zawierać tylko bieżącą działającą stronę, zatwierdzone aktywa MASTER oraz pojedynczy nowy element w trakcie testu. Nie przechowujemy na `main` porzuconych wariantów, plików tymczasowych, nieużywanych duplikatów ani automatycznych instalatorów chirurgicznych.
