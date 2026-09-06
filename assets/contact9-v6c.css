@@ -1,0 +1,95 @@
+/* OKNO 9 V6C — SURGICAL 1:1 REFINEMENT
+   Cel: usunąć ostatnie różnice widoczne na Galaxy S24 Ultra bez ruszania MASTER 1–8.
+   V6C jest wyłącznie odizolowanym testem OKNA 9.
+*/
+
+/* HERO: właściwy pellet + liść, bez wypalonego tekstu i bez ghostingu */
+.c9-hero{
+  min-height:20.8cqw!important;
+  padding:2.45cqw 3.35cqw 2.15cqw!important;
+  background:
+    linear-gradient(90deg,#031007 0%,#031109 45%,rgba(3,17,9,.82) 58%,rgba(3,17,9,.24) 73%,rgba(0,0,0,.02) 100%),
+    url("data:image/jpeg;base64,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") right center/52% 100% no-repeat!important;
+}
+.c9-hero:before{display:none!important}
+.c9-hero:after{
+  z-index:0!important;
+  background:linear-gradient(180deg,rgba(0,0,0,.01),rgba(0,0,0,.12))!important;
+}
+.c9-hero>*{position:relative;z-index:2}
+.c9-badge{padding:.58cqw 1.45cqw!important;border-radius:1.15cqw!important}
+.c9-hero-title{font-size:clamp(32px,7.35cqw,62px)!important;line-height:.91!important}
+.c9-hero-sub{font-size:clamp(9.5px,2.02cqw,17px)!important;margin:.15cqw 0 0!important}
+.c9-hero-meta{font-size:clamp(6.2px,1.27cqw,10.8px)!important;margin:.58cqw 0 0!important}
+.c9-hero-slogan{font-size:clamp(8.5px,1.88cqw,16px)!important;max-width:92%!important}
+
+/* Kontakt: delikatne dosunięcie do wzorca */
+.c9-contact-list{padding-top:1.25cqw!important;gap:1.15cqw!important}
+.c9-contact-row{padding:1.12cqw 1.38cqw!important;gap:1.45cqw!important;border-radius:1.55cqw!important}
+.c9-iconbox{min-height:8.9cqw!important;border-radius:1.35cqw!important}
+.c9-action{border-radius:1.35cqw!important}
+.c9-row-label{font-size:clamp(8px,1.76cqw,14.8px)!important}
+.c9-row-value{font-size:clamp(16.5px,3.78cqw,31.5px)!important}
+.c9-row-hint{font-size:clamp(6.2px,1.27cqw,10.6px)!important}
+
+/* Siedziba + magazyn */
+.c9-info-grid{padding-top:1.25cqw!important;gap:1.25cqw!important}
+.c9-company-panel,.c9-warehouse-panel{min-height:30.4cqw!important}
+.c9-panel{border-radius:1.55cqw!important}
+.c9-panel-inner{padding:1.85cqw 2cqw!important}
+.c9-company-name{margin:.9cqw 0 .6cqw!important}
+.c9-company-reg{margin-left:2cqw!important;margin-right:2cqw!important}
+.c9-company-note{padding:1cqw 2cqw 1.45cqw!important}
+
+.c9-warehouse-visual{
+  min-height:22.7cqw!important;
+  padding:1.85cqw 2cqw!important;
+}
+.c9-warehouse-photo{
+  content:url("data:image/jpeg;base64,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")!important;
+  object-fit:cover!important;
+  object-position:61% center!important;
+  filter:saturate(1.10) brightness(1.07) contrast(1.02)!important;
+}
+.c9-warehouse-visual:after{
+  background:linear-gradient(90deg,rgba(1,8,4,.94) 0%,rgba(1,8,4,.76) 39%,rgba(1,8,4,.27) 62%,rgba(1,8,4,.04) 84%)!important;
+}
+.c9-warehouse-person{margin:.82cqw 0 .45cqw!important}
+.c9-map-actions{gap:.8cqw!important;padding:.9cqw!important}
+.c9-mini-action{min-height:6.5cqw!important;border-radius:1.12cqw!important}
+
+/* Godziny + odbiór */
+.c9-secondary-grid{padding-top:1.15cqw!important}
+.c9-secondary-grid .c9-panel{min-height:17.7cqw!important;padding:1.55cqw 1.8cqw!important}
+.c9-hours-title,.c9-pickup-title{margin-bottom:.8cqw!important}
+.c9-check{margin:.34cqw 0!important;padding-left:2.35cqw!important}
+
+/* Sklep */
+.c9-store{
+  margin-top:1.2cqw!important;
+  padding:1.35cqw 1.55cqw!important;
+  gap:1.35cqw!important;
+  border-radius:1.45cqw!important;
+}
+.c9-store-icon,.c9-store-btn{min-height:8.15cqw!important;border-radius:1.2cqw!important}
+.c9-store-btn{position:relative;padding-right:3.5cqw!important}
+.c9-store-btn:after{
+  content:'›';position:absolute;right:1.25cqw;top:50%;transform:translateY(-53%);
+  font-size:2.2em;line-height:1;font-weight:900;color:#171100;
+}
+
+/* Pas zalet + stopka */
+.c9-trustbar{margin-top:1.25cqw!important;padding:1.45cqw .8cqw!important}
+.c9-trusticon{margin-bottom:.55cqw!important;width:3.55cqw!important;height:3.55cqw!important}
+.c9-footer{padding:1.65cqw 2cqw 1.85cqw!important;gap:1.25cqw!important}
+
+/* S24 Ultra / małe szerokości — bez poziomego overflow */
+@media(max-width:430px){
+  .c9test-page{padding-left:4px!important;padding-right:4px!important}
+  .c9-hero{min-height:21.2cqw!important;padding-left:3.2cqw!important;padding-right:3.2cqw!important}
+  .c9-contact-row{grid-template-columns:11.5% minmax(0,1fr) 28.5%!important}
+  .c9-info-grid{grid-template-columns:45.8% 54.2%!important}
+  .c9-row-value{font-size:clamp(15px,3.78cqw,21px)!important}
+  .c9-action{font-size:clamp(7.8px,1.92cqw,11.5px)!important}
+  .c9-secondary-grid .c9-panel{padding:1.45cqw 1.6cqw!important}
+}
