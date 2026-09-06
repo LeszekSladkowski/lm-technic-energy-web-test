@@ -97,6 +97,24 @@ Nie wolno ponownie zamieniać KAFEL 3 na spłaszczony plakat, wbudowywać tekst�
 
 Od tego miejsca dalsza budowa pozostaje wyłącznie **FORWARD ONLY**. Wszystkie elementy MASTER 001–008 są zamrożone.
 
+### AKTUALNE ZAMROŻONE ROZSZERZENIE — CAŁA STRONA DO KOŃCA OKNA 8 „PEWNY PARTNER”
+Status: **MASTER / RETURN POINT 008 — 100% SUKCES / ZATWIERDZONE NA SAMSUNG GALAXY S24 ULTRA / BEZWZGLĘDNIE NIEZMIENNE**
+
+Najnowszy autorytatywny zatwierdzony stan strony obejmuje dodatkowo całe OKNO 7 oraz OKNO 8.
+
+- zatwierdzony website-code commit: `d2d61a3ebed80ed364f5c71d954307dfc224a26b`;
+- zatwierdzony `index.html` blob SHA: `c292a50a049f9d38744992d03f38edd8c3f2305f`;
+- stały punkt powrotu: `MASTER-RETURN-POINT-008-OKNO-8-PEWNY-PARTNER-COMPLETE-LIVE-MULTILANGUAGE-2026-09-06`.
+
+Dodatkowo zamrożone są:
+- OKNO 7 `TERMINOWA LOGISTYKA` z grafikami `assets/OKNO_7_KAFEL_1_TRANSPORT_CIEZAROWY_MASTER_CLEAN.png` oraz `assets/OKNO_7_KAFEL_2_DOSTAWA_DO_KLIENTA_MASTER_CLEAN.png`;
+- OKNO 8 `PEWNY PARTNER`;
+- KAFEL 1 `PEWNY PARTNER` z grafiką `assets/OKNO_8_KAFEL_1_PEWNY_PARTNER_MASTER_CLEAN.png`;
+- KAFEL 2 `LIST PREZESA` z grafiką `assets/OKNO_8_KAFEL_2_LIST_PREZESA_MASTER_CLEAN.png`;
+- pełne działanie LIVE MULTILANGUAGE oraz zatwierdzone proporcje mobilne.
+
+**OKNO 9 `KONTAKT` jest obecnie pojedynczym elementem roboczym FORWARD ONLY na `main` i nie wchodzi do zamrożonego zakresu do czasu wyraźnego zatwierdzenia przez właściciela.**
+
 ---
 
 # MASTER MAPA DALSZEJ BUDOWY — 05.09.2026
@@ -191,6 +209,19 @@ Zatwierdzony website-code commit:
 Zakres: cała aktualna strona do końca OKNA 6 / KAFEL 3 `EKOLOGICZNE CIEPŁO`, przetestowana i zatwierdzona na Samsung Galaxy S24 Ultra wraz z działającym systemem językowym.
 
 Gałęzi 007 nie wolno przesuwać, nadpisywać, kasować ani używać do pracy roboczej.
+
+## 008 — CAŁA STRONA DO KOŃCA OKNA 8 „PEWNY PARTNER”
+Status: **BEZWZGLĘDNIE NIEZMIENNY / 100% PEWNY PUNKT POWROTU**
+
+Nazwa gałęzi:
+`MASTER-RETURN-POINT-008-OKNO-8-PEWNY-PARTNER-COMPLETE-LIVE-MULTILANGUAGE-2026-09-06`
+
+Zatwierdzony website-code commit:
+`d2d61a3ebed80ed364f5c71d954307dfc224a26b`
+
+Zakres: cała strona od początku do końca OKNA 8, w tym OKNO 7 `TERMINOWA LOGISTYKA`, OKNO 8 `PEWNY PARTNER` i `LIST PREZESA`, przetestowane i zatwierdzone na Samsung Galaxy S24 Ultra wraz z działającym systemem językowym.
+
+Gałęzi 008 nie wolno przesuwać, nadpisywać, kasować ani używać do pracy roboczej.
 
 ---
 
