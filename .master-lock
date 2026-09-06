@@ -1,5 +1,5 @@
 L&M TECHNIC ENERGY — MASTER LOCK
-Updated: 2026-09-05
+Updated: 2026-09-06
 
 LOCKED / DO NOT MODIFY WITHOUT EXPLICIT OWNER APPROVAL:
 - MASTER 001 — JĘZYK / LANGUAGE
@@ -9,14 +9,15 @@ LOCKED / DO NOT MODIFY WITHOUT EXPLICIT OWNER APPROVAL:
 - MASTER 005 — LIVE MULTILANGUAGE + WORKI 15 KG + BIG BAG
 - MASTER 006 — PELET LUZEM — GRAFIKA MASTER + LIVE MULTILANGUAGE CARD INSTALLED
 - MASTER 007 — CAŁA STRONA LIVE DO KOŃCA OKNA 6 / KAFEL 2
+- MASTER 008 — CAŁA STRONA LIVE DO KOŃCA OKNA 6 / KAFEL 3 — EKOLOGICZNE CIEPŁO
 - MASTER MAPA DALSZEJ BUDOWY — 05.09.2026
 
 CURRENT AUTHORITATIVE APPROVED STATE:
-- Entire current page explicitly approved by owner after Samsung Galaxy S24 Ultra testing on 2026-09-05.
-- Canonical approved website-code commit: 9c74c3e3a2d8bcaef91a3fe6e6099070226b84d5
-- Canonical approved index.html blob SHA: d4456c1002a99c5d119e5895a632f33899042adc
-- Permanent return branch: MASTER-RETURN-POINT-006-OKNO-6-KAFEL-1-2-LIVE-MULTILANGUAGE-2026-09-05
-- Frozen scope runs from the top of the page through the complete OKNO 6 / KAFEL 2.
+- Entire current page explicitly approved by owner after Samsung Galaxy S24 Ultra testing on 2026-09-06.
+- Canonical approved website-code commit: 6a255ad0b4d4f4fb2d48e75add1340681742f8dc
+- Canonical approved index.html blob SHA: 54955d596ee3e110f0f4bacc08a14c7f8da76be4
+- Permanent return branch: MASTER-RETURN-POINT-007-OKNO-6-KAFEL-3-LIVE-MULTILANGUAGE-2026-09-06
+- Frozen scope runs from the top of the page through the complete OKNO 6 / KAFEL 3.
 - Development remains FORWARD ONLY.
 
 MASTER 003 — HERO LIVE MULTILANGUAGE HARD LOCK:
@@ -62,20 +63,33 @@ COMPLETE OFFER HARD LOCK:
 - Permanent historical return branch: MASTER-RETURN-POINT-005-COMPLETE-OFFER-4-CARDS-LIVE-MULTILANGUAGE-2026-09-05
 
 MASTER 007 — WHOLE PAGE THROUGH OKNO 6 / KAFEL 2 HARD LOCK:
-- Whole current page approved as MASTER by owner after live test on Samsung Galaxy S24 Ultra.
+- Whole approved page state through KAFEL 2 remains immutable.
 - OKNO 6 heading and subtitle are live HTML and multilingual.
 - KAFEL 1 `POTWIERDZONA JAKOŚĆ A1` is frozen with live title/description, laboratory protocol view and live metric labels.
 - KAFEL 2 `WYSOKA WYDAJNOŚĆ` is frozen with live title/description, three live metric fields and the approved clean visual.
 - KAFEL 2 canonical visual: assets/OKNO_6_KAFEL_2_WYSOKA_WYDAJNOSC_MASTER_CLEAN.png
 - KAFEL 2 visual blob SHA: e4d018df2f03dd5f5c8e9c7f6f4238cc7c7ed160
 - KAFEL 2 visual size: 1658006 bytes
-- PL, DE, CZ, SK, AT, CH, NL, BE, LV, DK and EN switching is part of the frozen behavior.
 - No already approved element may be regenerated, retyped into an image, cropped, resized by a new layout rule, or altered while adding later cards.
+
+MASTER 008 — WHOLE PAGE THROUGH OKNO 6 / KAFEL 3 HARD LOCK:
+- Owner explicitly confirmed 100% success after live Samsung Galaxy S24 Ultra testing on 2026-09-06.
+- KAFEL 3 title: `EKOLOGICZNE CIEPŁO`.
+- KAFEL 3 title, description and three lower metric fields remain LIVE HTML text and MUST switch with the selected language.
+- KAFEL 3 canonical clean visual: assets/OKNO_6_KAFEL_3_EKOLOGICZNE_CIEPLO_MASTER_CLEAN.png
+- KAFEL 3 visual blob SHA: 34710198e434a81b9bc32bb35801ea4b40ca1f81
+- KAFEL 3 visual size: 2764645 bytes
+- The visual is a clean scene for the right side of the card; language text must not be baked into that raster.
+- Current approved card layout, proportions, border, typography, spacing and right-side image placement are immutable.
+- Never replace KAFEL 3 with a full poster/screenshot or static flattened card.
+- PL, DE, CZ, SK, AT, CH, NL, BE, LV, DK and EN switching is part of the frozen behavior.
+- Current approved website-code commit: 6a255ad0b4d4f4fb2d48e75add1340681742f8dc
+- Current approved index.html blob SHA: 54955d596ee3e110f0f4bacc08a14c7f8da76be4
 
 LANGUAGE ENGINE HARD LOCK:
 - Approved languages: PL, DE, CZ, SK, AT, CH, NL, BE, LV, DK, EN.
 - Current language selection persistence and switching behavior are locked.
-- Header/menu, HERO title/subtitle/CTA, product title/spec, complete OFFER section, OKNO 6 heading/subtitle, KAFEL 1 and KAFEL 2 live text must remain synchronized to selected language.
+- Header/menu, HERO title/subtitle/CTA, product title/spec, complete OFFER section, OKNO 6 heading/subtitle, KAFEL 1, KAFEL 2 and KAFEL 3 live text must remain synchronized to selected language.
 - Never solve a graphic problem by removing or freezing live multilingual text.
 
 PERMANENT QUICK RETURN POINTS:
@@ -93,6 +107,9 @@ PERMANENT QUICK RETURN POINTS:
 - MASTER-RETURN-POINT-006-OKNO-6-KAFEL-1-2-LIVE-MULTILANGUAGE-2026-09-05
   Website-code commit: 9c74c3e3a2d8bcaef91a3fe6e6099070226b84d5
   Status: BEZWZGLĘDNIE NIEZMIENNY / CAŁA AKTUALNA STRONA DO KOŃCA OKNA 6 / KAFEL 2
+- MASTER-RETURN-POINT-007-OKNO-6-KAFEL-3-LIVE-MULTILANGUAGE-2026-09-06
+  Website-code commit: 6a255ad0b4d4f4fb2d48e75add1340681742f8dc
+  Status: BEZWZGLĘDNIE NIEZMIENNY / CAŁA AKTUALNA STRONA DO KOŃCA OKNA 6 / KAFEL 3
 
 FORWARD-ONLY BUILD POLICY — OWNER STANDARD:
 1. One new element/card at a time.
@@ -103,7 +120,7 @@ FORWARD-ONLY BUILD POLICY — OWNER STANDARD:
 6. Before every write to index.html, compare the planned diff against all locked MASTER elements. If an unrelated locked MASTER would change, ABORT the write.
 7. Never regenerate an already approved graphic to solve an unrelated problem.
 8. Never perform broad refactors, formatting rewrites, CSS consolidation or cleanup that can touch locked MASTER sections.
-9. After every approved and fully tested complete window/section, create the next numbered permanent return point.
+9. After every explicitly frozen milestone, preserve an immutable return point when the owner requests a permanent freeze.
 10. Development direction is FORWARD ONLY: completed MASTER -> new topic -> new MASTER.
 
 Backup before CLEAN START: BACKUP-PRZED-CLEAN-2026-09-05
