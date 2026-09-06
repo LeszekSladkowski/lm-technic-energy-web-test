@@ -1,0 +1,18 @@
+OKNO 9 — KOREKTA ARCHITEKTURY
+Data: 2026-09-06
+
+STATUS: ROBOCZY — NIE MASTER.
+
+ZASADA BEZWZGLĘDNA:
+- zakaz widocznych nakładek tekstowych/graficznych na grafice OKNO 9;
+- wygląd ma odpowiadać zatwierdzonemu wzorcowi 1:1;
+- OKNO 1–8 pozostają nienaruszone;
+- finalny widok OKNO 9 ma być jedną spójną warstwą wizualną;
+- elementy interaktywne mogą mieć wyłącznie niewidoczne obszary kliknięcia, bez własnego tekstu, ikon, tła, obramowania i bez wpływu na wygląd;
+- żadnych tymczasowych workflow ani automatycznych fixerów.
+
+BŁĄD V3/V4:
+Zastosowano clean PNG + absolutnie pozycjonowane teksty/przyciski HTML. To powodowało rozjazdy i było sprzeczne z zasadą braku widocznych nakładek.
+
+CEL V5:
+Usunąć wizualną architekturę nakładek w OKNIE 9 i użyć zatwierdzonego obrazu jako jedynego źródła wyglądu 1:1, pozostawiając wyłącznie niewidoczną funkcjonalność kliknięć telefonu, e-mail, mapy, trasy i sklepu.
