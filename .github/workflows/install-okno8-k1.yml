@@ -1,0 +1,76 @@
+name: Install OKNO 8 Kafel 1 LIVE
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    if: github.event.head_commit.message == 'BOOTSTRAP OKNO8 K1'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Patch index surgically
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          def dec(path):
+              return base64.b64decode(Path(path).read_text(encoding='utf-8').strip()).decode('utf-8')
+          def once(old,new,label):
+              global s
+              n=s.count(old)
+              if n != 1:
+                  raise SystemExit(f'{label} anchor count={n}, expected 1')
+              s=s.replace(old,new,1)
+          if 'OKNO_8_KAFEL_1_PEWNY_PARTNER_MASTER_CLEAN.png?v=20260906partner8k1master1' in s:
+              raise SystemExit('OKNO 8 Kafel 1 already installed; aborting duplicate patch')
+          css=dec('.github/lm_tmp/okno8_css.b64')
+          html=dec('.github/lm_tmp/okno8_html.b64')
+          refs=dec('.github/lm_tmp/okno8_refs.b64')
+          copy=dec('.github/lm_tmp/okno8_copy.b64')
+          apply=dec('.github/lm_tmp/okno8_apply.b64')
+          once('\n@media(max-width:430px){','\n'+css+'\n@media(max-width:430px){','CSS')
+          build='\n<!-- BUILD ROOT: kolejne kafle instalowane wyłącznie po zatwierdzeniu 1:1 według MASTER MAPY 2026-09-05 --><div id="buildRoot"></div>'
+          once(build,'\n'+html+build,'HTML')
+          logprefix="const logHeadA=document.getElementById('logHeadA')"
+          start=s.find(logprefix)
+          if start < 0: raise SystemExit('JS refs anchor missing')
+          end=s.find('\n',start)
+          if end < 0: raise SystemExit('JS refs line end missing')
+          s=s[:end+1]+refs+s[end+1:]
+          once('\nfunction getCopy(table,code){','\n'+copy+'\nfunction getCopy(table,code){','copy table')
+          tail="logVanM3L.textContent=l.van.labels[2];logVanM3V.textContent=l.van.values[2]}"
+          once(tail,tail[:-1]+apply+'}','applyLanguage tail')
+          required=['id="partner"','id="partnerTitle"','id="partnerDesc"','OKNO_8_KAFEL_1_PEWNY_PARTNER_MASTER_CLEAN.png?v=20260906partner8k1master1',"const partnerCopy={","const partnerHeadA=document.getElementById('partnerHeadA')"]
+          for x in required:
+              if x not in s: raise SystemExit('Missing required signature: '+x)
+          p.write_text(s,encoding='utf-8')
+          PY
+      - name: Validate JavaScript and diff
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          s=Path('index.html').read_text(encoding='utf-8')
+          m=re.search(r'<script>(.*?)</script>',s,re.S)
+          if not m: raise SystemExit('script not found')
+          Path('/tmp/index-script.js').write_text(m.group(1),encoding='utf-8')
+          PY
+          node --check /tmp/index-script.js
+          git diff --check
+          test "$(git diff --name-only)" = "index.html"
+      - name: Commit LIVE Kafel 1
+        run: |
+          git config user.name "L&M Technic Energy Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html
+          git commit -m "OKNO 8 KAFEL 1 — PEWNY PARTNER LIVE MULTILANGUAGE"
+          git push origin main
