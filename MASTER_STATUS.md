@@ -1,6 +1,6 @@
 # MASTER STATUS — L&M Technic Energy WEB
 
-Data aktualizacji: **05.09.2026**
+Data aktualizacji: **06.09.2026**
 
 ## AKTYWNE I ZAMROŻONE MASTER-y
 
@@ -69,6 +69,33 @@ Grafika KAFEL 2:
 - rozmiar: `1658006` B.
 
 Od tego miejsca dalsza budowa jest wyłącznie **FORWARD ONLY**. Żaden element MASTER 001–007 nie może zostać zmieniony bez jednoznacznej decyzji właściciela wskazującej konkretny element.
+
+### MASTER 008 — CAŁA STRONA LIVE DO KOŃCA OKNA 6 / KAFEL 3 — EKOLOGICZNE CIEPŁO
+Status: **MASTER — 100% SUKCES / BEZWZGLĘDNIE ZATWIERDZONY / BEZAPELACYJNIE ZAMROŻONY / BEZWZGLĘDNIE NIEZMIENNY**
+
+Data zatwierdzenia: **06.09.2026**.
+
+Po pełnym teście na Samsung Galaxy S24 Ultra właściciel projektu potwierdził, że KAFEL 3 oraz cały aktualny zakres strony działają idealnie, w tym poprawne przełączanie języków i poprawne wyświetlanie czystej grafiki KAFEL 3.
+
+Autorytatywny zatwierdzony stan kodu strony:
+- website-code commit: `6a255ad0b4d4f4fb2d48e75add1340681742f8dc`;
+- `index.html` blob SHA: `54955d596ee3e110f0f4bacc08a14c7f8da76be4`;
+- KAFEL 3 grafika: `assets/OKNO_6_KAFEL_3_EKOLOGICZNE_CIEPLO_MASTER_CLEAN.png`;
+- grafika blob SHA: `34710198e434a81b9bc32bb35801ea4b40ca1f81`;
+- grafika rozmiar: `2764645` B;
+- stały punkt powrotu: `MASTER-RETURN-POINT-007-OKNO-6-KAFEL-3-LIVE-MULTILANGUAGE-2026-09-06`.
+
+Zakres MASTER 008 obejmuje całą stronę od góry do końca OKNA 6 / KAFEL 3. W szczególności dodatkowo zamrożone zostają:
+- KAFEL 3 `EKOLOGICZNE CIEPŁO`;
+- czysta scena graficzna po prawej stronie, bez tekstu językowego w obrazie;
+- żywy tytuł i opis HTML;
+- trzy żywe pola parametrów;
+- pełne przełączanie PL, DE, CZ, SK, AT, CH, NL, BE, LV, DK i EN razem z resztą strony;
+- proporcje, układ, typografia, ramki oraz obecny sposób renderowania na Samsung Galaxy S24 Ultra.
+
+Nie wolno ponownie zamieniać KAFEL 3 na spłaszczony plakat, wbudowywać tekstów językowych w grafikę, zmieniać grafiki, proporcji, kadrowania, rozmiaru, układu ani logiki językowej bez jednoznacznego polecenia właściciela dotyczącego właśnie KAFEL 3.
+
+Od tego miejsca dalsza budowa pozostaje wyłącznie **FORWARD ONLY**. Wszystkie elementy MASTER 001–008 są zamrożone.
 
 ---
 
@@ -151,6 +178,19 @@ Zatwierdzony commit kodu strony:
 Zakres: cała aktualna strona, kompletna OFERTA oraz OKNO 6 z KAFLEM 1 i KAFLEM 2, przetestowane i zatwierdzone na Samsung Galaxy S24 Ultra.
 
 Gałęzi 006 nie wolno przesuwać, nadpisywać, kasować ani używać do pracy roboczej.
+
+## 007 — CAŁA STRONA DO KOŃCA OKNA 6 / KAFEL 3
+Status: **BEZWZGLĘDNIE NIEZMIENNY / 100% PEWNY PUNKT POWROTU**
+
+Nazwa gałęzi:
+`MASTER-RETURN-POINT-007-OKNO-6-KAFEL-3-LIVE-MULTILANGUAGE-2026-09-06`
+
+Zatwierdzony website-code commit:
+`6a255ad0b4d4f4fb2d48e75add1340681742f8dc`
+
+Zakres: cała aktualna strona do końca OKNA 6 / KAFEL 3 `EKOLOGICZNE CIEPŁO`, przetestowana i zatwierdzona na Samsung Galaxy S24 Ultra wraz z działającym systemem językowym.
+
+Gałęzi 007 nie wolno przesuwać, nadpisywać, kasować ani używać do pracy roboczej.
 
 ---
 
