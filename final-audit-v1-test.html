@@ -3,30 +3,85 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>L&M Technic Energy — FINAL AUDIT V4</title>
+<title>L&M Technic Energy — FINAL AUDIT V5 LIVE</title>
 <style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000}#pageFrame{display:block;width:100%;height:100%;border:0;background:#000}</style>
 </head>
 <body>
-<iframe id="pageFrame" src="index.html?final-audit-v4=20260907" title="L&M Technic Energy — FINAL AUDIT V4"></iframe>
+<iframe id="pageFrame" src="index.html?final-audit-v5=20260907" title="L&M Technic Energy — FINAL AUDIT V5 LIVE"></iframe>
 <script>
 (()=>{
 'use strict';
 const frame=document.getElementById('pageFrame');
-const SHOP_HREF='#';
-function waitForContact(d,cb,n=0){
-  const el=d.getElementById('contact9');
-  if(el){cb(el);return}
-  if(n<80)setTimeout(()=>waitForContact(d,cb,n+1),100);
+const C9_IDS=['c9Badge','c9Title','c9HeroSub','c9HeroMeta','c9HeroSlogan','c9SalesLabel','c9SalesHint','c9SalesBtn','c9EmailLabel','c9EmailHint','c9EmailBtn','c9StockLabel','c9StockHint','c9StockBtn','c9CompanyLabel','c9CompanyNote','c9WarehouseTitle','c9MapBtn','c9RouteBtn','c9HoursTitle','c9Weekdays','c9Saturday','c9Sunday','c9Closed','c9HoursNote','c9PickupTitle','c9Pickup1','c9Pickup2','c9Pickup3','c9Pickup4','c9Pickup5','c9StoreTitle','c9StoreDesc','c9StoreBtn','c9Trust1','c9Trust2','c9Trust3','c9Trust4','c9FooterPellet','c9FooterSlogan','c9Rights'];
+function waitForContact(d,cb,n=0){const el=d.getElementById('contact9');if(el){cb(el);return}if(n<100)setTimeout(()=>waitForContact(d,cb,n+1),80)}
+function currentLanguage(d,w){
+  try{const x=JSON.parse(w.localStorage.getItem('lm-language'));if(x&&x.code)return x.code}catch(e){}
+  const n=(d.getElementById('currentName')||{}).textContent||'POLSKI';
+  const m={'POLSKI':'pl','DEUTSCH':'de','ČEŠTINA':'cs','SLOVENČINA':'sk','DEUTSCH (AT)':'de-AT','SCHWEIZ':'de-CH','NEDERLANDS':'nl','BELGIË / BELGIQUE':'be','LATVIEŠU':'lv','DANSK':'da','ENGLISH':'en'};
+  return m[n]||'pl';
 }
+function validHref(v){return v&&v!=='#'&&!/^javascript:/i.test(v)}
 function install(){
-  const d=frame.contentDocument,w=frame.contentWindow;
-  if(!d||!w)return;
+  const d=frame.contentDocument,w=frame.contentWindow;if(!d||!w)return;
   waitForContact(d,(old)=>{
+    const carry={};C9_IDS.forEach(id=>{const e=d.getElementById(id);carry[id]=e?e.textContent:''});
+    const language=currentLanguage(d,w);
+    const topShop=d.querySelector('.shop-btn');
+    const oldShop=d.getElementById('c9StoreBtn');
+    const shopHref=validHref(oldShop&&oldShop.getAttribute('href'))?oldShop.getAttribute('href'):(validHref(topShop&&topShop.getAttribute('href'))?topShop.getAttribute('href'):'#offer');
+
     const host=d.createElement('section');
     host.id='contact9';
-    host.setAttribute('aria-label','Kontakt L&M Technic Energy — MASTER 009 STATIC 1:1');
-    host.innerHTML=`<div class="master009-static">
-      <img src="assets/file_0000000041408210abd1b4dcca9e4eb6.png?v=20260907-master009-static" alt="L&M Technic Energy — Kontakt" draggable="false">
+    host.setAttribute('aria-label','Kontakt L&M Technic Energy — MASTER 009 LIVE');
+    host.innerHTML=`<div class="master009-live" data-lang="${language}">
+      <img class="master009-image" src="assets/file_0000000041408210abd1b4dcca9e4eb6.png?v=20260907-master009-live" alt="L&M Technic Energy — Kontakt" draggable="false">
+
+      <div class="c9-i18n-layer" aria-live="polite">
+        <span class="tx hero badge" id="c9Badge">OKNO 9</span>
+        <span class="tx hero title" id="c9Title">KONTAKT</span>
+        <span class="tx hero sub" id="c9HeroSub">JESTEŚMY DO TWOJEJ DYSPOZYCJI</span>
+        <span class="tx hero meta" id="c9HeroMeta">SZYBKI KONTAKT • PROFESJONALNA OBSŁUGA • PEWNA WSPÓŁPRACA</span>
+        <span class="tx hero slogan" id="c9HeroSlogan">Czysta energia w dobrych rękach!</span>
+
+        <span class="tx row label sales-label" id="c9SalesLabel">SPRZEDAŻ / OBSŁUGA KLIENTA</span>
+        <span class="tx row hint sales-hint" id="c9SalesHint">ZADZWOŃ TERAZ — SZYBKA ODPOWIEDŹ</span>
+        <span class="tx btn green sales-btn" id="c9SalesBtn">ZADZWOŃ TERAZ</span>
+        <span class="tx row label email-label" id="c9EmailLabel">E-MAIL</span>
+        <span class="tx row hint email-hint" id="c9EmailHint">NAPISZ DO NAS — ODPOWIADAMY NA BIEŻĄCO</span>
+        <span class="tx btn blue email-btn" id="c9EmailBtn">NAPISZ E-MAIL</span>
+        <span class="tx row label stock-label" id="c9StockLabel">MAGAZYN / LOGISTYKA</span>
+        <span class="tx row hint stock-hint" id="c9StockHint">KONTAKT W SPRAWIE ODBIORU I TRANSPORTU</span>
+        <span class="tx btn gold stock-btn" id="c9StockBtn">ZADZWOŃ DO MAGAZYNU</span>
+
+        <span class="tx panel ptitle company-label" id="c9CompanyLabel">SIEDZIBA SPÓŁKI</span>
+        <span class="tx panel note company-note" id="c9CompanyNote">Siedziba rejestrowa i dane formalne spółki.</span>
+        <span class="tx panel ptitle warehouse-title" id="c9WarehouseTitle">MAGAZYN • ODBIÓR • LOGISTYKA</span>
+        <span class="tx btn blue map-btn" id="c9MapBtn">OTWÓRZ MAPĘ</span>
+        <span class="tx btn green route-btn" id="c9RouteBtn">PROWADŹ DO MAGAZYNU</span>
+
+        <span class="tx panel ptitle hours-title" id="c9HoursTitle">GODZINY KONTAKTU</span>
+        <span class="tx panel day week" id="c9Weekdays">Poniedziałek – Piątek</span>
+        <span class="tx panel day sat" id="c9Saturday">Sobota</span>
+        <span class="tx panel day sun" id="c9Sunday">Niedziela</span>
+        <span class="tx panel day closed" id="c9Closed">Nieczynne</span>
+        <span class="tx panel note hours-note" id="c9HoursNote">Zadzwoń przed przyjazdem — potwierdzimy dostępność.</span>
+
+        <span class="tx panel ptitle pickup-title" id="c9PickupTitle">ODBIÓR OSOBISTY</span>
+        <div class="tx panel pickup-list"><span id="c9Pickup1">Możliwy odbiór osobisty pelletu</span><span id="c9Pickup2">Profesjonalny załadunek</span><span id="c9Pickup3">Pomoc naszego zespołu</span><span id="c9Pickup4">Szybka realizacja zamówień</span><span id="c9Pickup5">Dogodny dojazd dla klientów indywidualnych i firm</span></div>
+
+        <span class="tx row store-title" id="c9StoreTitle">SPRAWDŹ OFERTĘ I DOSTĘPNOŚĆ W NASZYM SKLEPIE INTERNETOWYM</span>
+        <span class="tx row store-desc" id="c9StoreDesc">Aktualną dostępność produktów, ceny i zamówienia znajdziesz w naszym sklepie online.</span>
+        <span class="tx btn gold store-btn-tx" id="c9StoreBtn">PRZEJDŹ DO SKLEPU</span>
+
+        <span class="tx black trust t1" id="c9Trust1">CZYSTA ENERGIA Z NATURY</span>
+        <span class="tx black trust t2" id="c9Trust2">PEWNY DOSTAWCA</span>
+        <span class="tx black trust t3" id="c9Trust3">SOLIDNA WSPÓŁPRACA</span>
+        <span class="tx black trust t4" id="c9Trust4">STABILNY ROZWÓJ</span>
+        <span class="tx black footer-pellet" id="c9FooterPellet">Pellet drzewny PREMIUM A1</span>
+        <span class="tx black footer-slogan" id="c9FooterSlogan">Czysta energia — lepsze jutro!</span>
+        <span class="tx black rights" id="c9Rights">Wszelkie prawa zastrzeżone.</span>
+      </div>
+
       <a class="hot h-sales-left" href="tel:+48723588333" aria-label="Zadzwoń +48 723 588 333"></a>
       <a class="hot h-sales" href="tel:+48723588333" aria-label="Zadzwoń teraz"></a>
       <a class="hot h-email-left" href="mailto:lmtechnic@wp.pl" aria-label="Napisz e-mail"></a>
@@ -35,32 +90,69 @@ function install(){
       <a class="hot h-stock" href="tel:+48510108170" aria-label="Zadzwoń do magazynu"></a>
       <a class="hot h-map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Nawarzyce+103%2C+28-330+Wodzis%C5%82aw%2C+Poland" aria-label="Otwórz mapę"></a>
       <a class="hot h-route" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Nawarzyce+103%2C+28-330+Wodzis%C5%82aw%2C+Poland" aria-label="Prowadź do magazynu"></a>
-      <a class="hot h-shop" href="${SHOP_HREF}" aria-label="Przejdź do sklepu"></a>
+      <a class="hot h-shop" href="${shopHref}" aria-label="Przejdź do sklepu"></a>
     </div>`;
-    const style=d.createElement('style');
-    style.id='master009-static-style';
-    style.textContent=`
+
+    const style=d.createElement('style');style.id='master009-live-style';style.textContent=`
       #contact9{display:block;background:#000;padding:4px 14px 24px;box-sizing:border-box}
-      .master009-static{position:relative;width:100%;aspect-ratio:853/1366;margin:0 auto;background:#000;overflow:hidden}
-      .master009-static>img{position:absolute;left:0;top:0;display:block;width:100%;height:auto;margin:0;border:0;user-select:none;-webkit-user-select:none;transform:translateY(-11.0677083333%)}
-      .master009-static .hot{position:absolute;z-index:5;display:block;background:transparent;border:0;text-decoration:none;-webkit-tap-highlight-color:transparent}
-      .h-sales-left{left:4.8%;top:13.4%;width:58%;height:6.7%}.h-sales{left:69%;top:13.4%;width:27%;height:6.7%}
-      .h-email-left{left:4.8%;top:22.2%;width:58%;height:6.7%}.h-email{left:69%;top:22.2%;width:27%;height:6.7%}
-      .h-stock-left{left:4.8%;top:31.0%;width:58%;height:6.7%}.h-stock{left:69%;top:31.0%;width:27%;height:6.7%}
-      .h-map{left:46.0%;top:61.0%;width:23.5%;height:6.1%}.h-route{left:71.0%;top:61.0%;width:24.5%;height:6.1%}
-      .h-shop{left:66.0%;top:79.6%;width:29.5%;height:7.1%}
+      .master009-live{container-type:inline-size;position:relative;width:100%;aspect-ratio:853/1366;margin:0 auto;background:#000;overflow:hidden}
+      .master009-image{position:absolute;left:0;top:0;display:block;width:100%;height:auto;margin:0;border:0;user-select:none;-webkit-user-select:none;transform:translateY(-11.0677083333%)}
+      .master009-live .hot{position:absolute;z-index:12;display:block;background:transparent;border:0;text-decoration:none;-webkit-tap-highlight-color:rgba(255,215,80,.18);cursor:pointer}
+      .master009-live .hot:focus-visible{outline:2px solid #ffd55a;outline-offset:-2px;border-radius:1cqw}
+      .h-sales-left{left:4.4%;top:13.55%;width:57.5%;height:8.05%}.h-sales{left:69.1%;top:13.55%;width:26.2%;height:8.05%}
+      .h-email-left{left:4.4%;top:22.55%;width:57.5%;height:8.05%}.h-email{left:69.1%;top:22.55%;width:26.2%;height:8.05%}
+      .h-stock-left{left:4.4%;top:31.48%;width:57.5%;height:8.05%}.h-stock{left:69.1%;top:31.48%;width:26.2%;height:8.05%}
+      .h-map{left:45.8%;top:55.35%;width:23.7%;height:5.45%}.h-route{left:71.1%;top:55.35%;width:24.1%;height:5.45%}
+      .h-shop{left:66.0%;top:76.15%;width:29.3%;height:6.85%}
+
+      .c9-i18n-layer{position:absolute;inset:0;z-index:8;pointer-events:none;display:none;font-family:Arial,Helvetica,sans-serif}
+      .master009-live:not([data-lang="pl"]) .c9-i18n-layer{display:block}
+      .tx{position:absolute;box-sizing:border-box;display:flex;align-items:center;overflow:hidden;color:#fff;font-weight:800;line-height:1.05;padding:.12cqw .42cqw}
+      .tx.hero,.tx.row,.tx.panel{background:rgba(1,13,7,.985)}
+      .tx.black{background:rgba(1,4,2,.99)}
+      .tx.label,.tx.ptitle{color:#32e879;font-weight:900;text-transform:uppercase}
+      .tx.hint,.tx.note{color:#f4f4ef;font-weight:650}
+      .tx.btn{justify-content:center;text-align:center;color:#fff;font-weight:900;text-transform:uppercase;border-radius:1.1cqw;text-shadow:0 .25cqw .55cqw rgba(0,0,0,.72)}
+      .tx.btn.green{background:linear-gradient(180deg,#25e56d,#08aa4d)}
+      .tx.btn.blue{background:linear-gradient(180deg,#32a3ff,#0864c8)}
+      .tx.btn.gold{background:linear-gradient(180deg,#ffd65e,#d8990b);color:#15110a;text-shadow:none}
+      .tx.badge{left:4.9%;top:.92%;width:8.0%;height:1.48%;justify-content:center;background:#051007;color:#f3c54e;font-size:1.25cqw;border-radius:.55cqw}
+      .tx.title{left:3.55%;top:3.42%;width:50.3%;height:4.45%;color:#f4c851;font-family:Georgia,'Times New Roman',serif;font-size:6.15cqw;font-weight:900;letter-spacing:.05cqw}
+      .tx.sub{left:3.55%;top:7.88%;width:57.4%;height:2.18%;color:#f0c45a;font-size:2.15cqw;font-weight:900;text-transform:uppercase}
+      .tx.meta{left:3.55%;top:10.18%;width:59.4%;height:1.62%;font-size:1.28cqw;font-weight:850;white-space:nowrap;text-transform:uppercase}
+      .tx.slogan{left:80.0%;top:3.0%;width:16.2%;height:6.7%;justify-content:center;text-align:center;color:#e4bd64;background:rgba(4,28,12,.68);font-family:Georgia,'Times New Roman',serif;font-size:1.65cqw;font-style:italic;white-space:normal;border-radius:.8cqw}
+
+      .sales-label{left:16.8%;top:14.78%;width:39.6%;height:2.1%;font-size:1.68cqw}.sales-hint{left:16.8%;top:19.39%;width:42.4%;height:1.72%;font-size:1.18cqw}.sales-btn{left:72.3%;top:15.28%;width:21.2%;height:4.42%;font-size:1.9cqw}
+      .email-label{left:16.8%;top:23.84%;width:15.0%;height:2.05%;font-size:1.68cqw}.email-hint{left:16.8%;top:28.31%;width:42.5%;height:1.72%;font-size:1.18cqw}.email-btn{left:73.15%;top:24.70%;width:21.0%;height:4.25%;font-size:1.88cqw}
+      .stock-label{left:16.8%;top:32.69%;width:31.5%;height:2.08%;font-size:1.65cqw}.stock-hint{left:16.8%;top:37.03%;width:43.4%;height:1.78%;font-size:1.15cqw}.stock-btn{left:72.5%;top:33.75%;width:22.0%;height:4.35%;font-size:1.78cqw}
+
+      .company-label{left:12.45%;top:41.43%;width:26.5%;height:2.18%;font-size:1.55cqw}.company-note{left:6.0%;top:59.48%;width:32.5%;height:2.06%;font-size:1.05cqw}
+      .warehouse-title{left:54.55%;top:41.43%;width:37.7%;height:2.18%;font-size:1.5cqw}
+      .map-btn{left:50.65%;top:56.42%;width:19.0%;height:3.15%;font-size:1.36cqw}.route-btn{left:74.3%;top:56.42%;width:20.3%;height:3.15%;font-size:1.32cqw;color:#fff}
+
+      .hours-title{left:12.20%;top:63.02%;width:24.2%;height:2.15%;font-size:1.45cqw}.week{left:12.2%;top:65.68%;width:21.8%;height:1.92%;font-size:1.25cqw}.sat{left:12.2%;top:67.82%;width:14.6%;height:1.82%;font-size:1.25cqw}.sun{left:12.2%;top:69.93%;width:14.6%;height:1.82%;font-size:1.25cqw}.closed{left:33.3%;top:69.93%;width:12.0%;height:1.82%;justify-content:flex-end;font-size:1.25cqw;font-weight:900}.hours-note{left:6.0%;top:72.08%;width:41.5%;height:2.55%;font-size:1.02cqw;white-space:normal}
+      .pickup-title{left:57.9%;top:63.02%;width:25.2%;height:2.15%;font-size:1.45cqw}.pickup-list{left:58.45%;top:65.76%;width:37.2%;height:8.48%;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:.18cqw;font-size:1.18cqw;line-height:1.16;background:rgba(1,13,7,.985)}.pickup-list>span{display:block;width:100%;white-space:normal}
+
+      .store-title{left:19.85%;top:77.02%;width:41.8%;height:3.3%;color:#efc45c;font-size:1.55cqw;font-weight:900;white-space:normal}.store-desc{left:19.85%;top:80.91%;width:42.0%;height:3.5%;font-size:1.08cqw;font-weight:600;white-space:normal}.store-btn-tx{left:71.75%;top:78.03%;width:21.4%;height:4.55%;font-size:1.7cqw}
+      .trust{justify-content:center;text-align:center;font-size:1.03cqw;font-weight:900;white-space:normal}.t1{left:10.85%;top:86.83%;width:12.1%;height:3.7%}.t2{left:33.8%;top:86.83%;width:12.6%;height:3.7%}.t3{left:58.7%;top:86.83%;width:13.4%;height:3.7%}.t4{left:82.5%;top:86.83%;width:13.3%;height:3.7%}
+      .footer-pellet{left:32.45%;top:94.18%;width:24.5%;height:2.18%;justify-content:center;font-size:1.18cqw;font-weight:500}.footer-slogan{left:29.9%;top:96.35%;width:29.3%;height:2.65%;justify-content:center;color:#e8bd5c;font-family:Georgia,'Times New Roman',serif;font-size:1.48cqw;font-style:italic}.rights{left:73.25%;top:97.10%;width:23.2%;height:2.15%;justify-content:flex-end;text-align:right;font-size:.78cqw;font-weight:500}
       @media(max-width:430px){#contact9{padding-left:9px;padding-right:9px}}
     `;
     d.head.appendChild(style);
     old.replaceWith(host);
 
+    C9_IDS.forEach(id=>{const e=d.getElementById(id);if(e&&carry[id])e.textContent=carry[id]});
+
+    const live=host.querySelector('.master009-live');
+    d.querySelectorAll('.opt[data-code]').forEach(opt=>opt.addEventListener('click',()=>{setTimeout(()=>{live.dataset.lang=opt.dataset.code||'pl'},0)}));
+
     const marker=d.createElement('span');marker.id='warehouse9';marker.style.cssText='display:block;position:relative;top:-6px;height:1px;width:1px';host.before(marker);
     const product=d.querySelector('.product-master');if(product&&!product.id)product.id='products';
     const links={navOffer:'#offer',navProducts:'#products',navStock:'#warehouse9',navLogistics:'#logistics',navContact:'#contact9'};
     Object.entries(links).forEach(([id,href])=>{const a=d.getElementById(id);if(a)a.href=href});
-    const heroShop=d.getElementById('heroCta');if(heroShop)heroShop.href=SHOP_HREF;
-    const topShop=d.querySelector('.shop-btn');if(topShop)topShop.href=SHOP_HREF;
-    d.documentElement.dataset.finalAudit='v4-master009-static-upload';
+    const heroShop=d.getElementById('heroCta');if(heroShop&&!validHref(heroShop.getAttribute('href')))heroShop.href=shopHref;
+    if(topShop&&!validHref(topShop.getAttribute('href')))topShop.href=shopHref;
+    d.documentElement.dataset.finalAudit='v5-master009-live-multilingual';
   });
 }
 frame.addEventListener('load',install);
