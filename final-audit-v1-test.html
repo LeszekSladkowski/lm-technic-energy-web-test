@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>L&M Technic Energy — FINAL AUDIT V3</title>
+<title>L&M Technic Energy — FINAL AUDIT V4</title>
 <style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000}#pageFrame{display:block;width:100%;height:100%;border:0;background:#000}</style>
 </head>
 <body>
-<iframe id="pageFrame" src="index.html?final-audit-v3=20260907" title="L&M Technic Energy — FINAL AUDIT V3"></iframe>
+<iframe id="pageFrame" src="index.html?final-audit-v4=20260907" title="L&M Technic Energy — FINAL AUDIT V4"></iframe>
 <script>
 (()=>{
 'use strict';
@@ -24,9 +24,9 @@ function install(){
   waitForContact(d,(old)=>{
     const host=d.createElement('section');
     host.id='contact9';
-    host.setAttribute('aria-label','Kontakt L&M Technic Energy — MASTER 009');
-    host.innerHTML=`<div class="master009-exact">
-      <img src="assets/OKNO_9_KONTAKT_MASTER_CLEAN.png?v=20260907-master009" alt="L&M Technic Energy — Kontakt" draggable="false">
+    host.setAttribute('aria-label','Kontakt L&M Technic Energy — MASTER 009 STATIC 1:1');
+    host.innerHTML=`<div class="master009-static">
+      <img src="assets/file_0000000041408210abd1b4dcca9e4eb6.png?v=20260907-master009-static" alt="L&M Technic Energy — Kontakt" draggable="false">
       <a class="hot h-sales-left" href="tel:+48723588333" aria-label="Zadzwoń +48 723 588 333"></a>
       <a class="hot h-sales" href="tel:+48723588333" aria-label="Zadzwoń teraz"></a>
       <a class="hot h-email-left" href="mailto:lmtechnic@wp.pl" aria-label="Napisz e-mail"></a>
@@ -38,12 +38,12 @@ function install(){
       <a class="hot h-shop" href="${SHOP_HREF}" aria-label="Przejdź do sklepu"></a>
     </div>`;
     const style=d.createElement('style');
-    style.id='master009-exact-style';
+    style.id='master009-static-style';
     style.textContent=`
       #contact9{display:block;background:#000;padding:4px 14px 24px;box-sizing:border-box}
-      .master009-exact{position:relative;width:100%;margin:0 auto;background:#000;overflow:hidden}
-      .master009-exact>img{display:block;width:100%;height:auto;margin:0;border:0;user-select:none;-webkit-user-select:none}
-      .master009-exact .hot{position:absolute;z-index:5;display:block;background:transparent;border:0;text-decoration:none;-webkit-tap-highlight-color:transparent}
+      .master009-static{position:relative;width:100%;aspect-ratio:853/1366;margin:0 auto;background:#000;overflow:hidden}
+      .master009-static>img{position:absolute;left:0;top:0;display:block;width:100%;height:auto;margin:0;border:0;user-select:none;-webkit-user-select:none;transform:translateY(-11.0677083333%)}
+      .master009-static .hot{position:absolute;z-index:5;display:block;background:transparent;border:0;text-decoration:none;-webkit-tap-highlight-color:transparent}
       .h-sales-left{left:4.8%;top:13.4%;width:58%;height:6.7%}.h-sales{left:69%;top:13.4%;width:27%;height:6.7%}
       .h-email-left{left:4.8%;top:22.2%;width:58%;height:6.7%}.h-email{left:69%;top:22.2%;width:27%;height:6.7%}
       .h-stock-left{left:4.8%;top:31.0%;width:58%;height:6.7%}.h-stock{left:69%;top:31.0%;width:27%;height:6.7%}
@@ -60,7 +60,7 @@ function install(){
     Object.entries(links).forEach(([id,href])=>{const a=d.getElementById(id);if(a)a.href=href});
     const heroShop=d.getElementById('heroCta');if(heroShop)heroShop.href=SHOP_HREF;
     const topShop=d.querySelector('.shop-btn');if(topShop)topShop.href=SHOP_HREF;
-    d.documentElement.dataset.finalAudit='v3-master009-exact-clean';
+    d.documentElement.dataset.finalAudit='v4-master009-static-upload';
   });
 }
 frame.addEventListener('load',install);
