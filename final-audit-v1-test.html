@@ -3,14 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>L&M Technic Energy — FINAL AUDIT V1</title>
+<title>L&M Technic Energy — FINAL AUDIT V2</title>
 <style>
 html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000}
-#pageFrame{display:block;width:100%;height:100%;border:0;background:#000}
+#pageFrame{display:block;width:100%;height:100%;border:0;background:#000;opacity:0;transition:opacity .12s linear}
+#pageFrame.ready{opacity:1}
 </style>
 </head>
 <body>
-<iframe id="pageFrame" src="index.html?final-audit-v1=20260907" title="L&M Technic Energy — FINAL AUDIT V1"></iframe>
+<iframe id="pageFrame" title="L&M Technic Energy — FINAL AUDIT V2"></iframe>
 <script>
 (()=>{
 'use strict';
@@ -39,67 +40,63 @@ const V7_MARKUP=`
   <footer class="c9-footer"><p class="c9-footer-brand">L&amp;M <span class="gold">TECHNIC</span><span class="green">ENERGY</span></p><div class="c9-footer-center"><span class="c9-footer-pellet" id="v6Pellet">Pellet drzewny PREMIUM A1</span><span class="c9-footer-slogan" id="v6FooterSlogan">Czysta energia — lepsze jutro!</span></div><div class="c9-footer-company">L&amp;M TECHNIC Sp. z o.o.<br>NIP 9592065184 • REGON 526276350 • KRS 0001055885</div><p class="c9-footer-copy">© 2026 L&amp;M TECHNIC ENERGY. <span id="v6Rights">Wszelkie prawa zastrzeżone.</span></p></footer>
 </article>`;
 
+async function waitForContact(d,limit=80){
+  for(let i=0;i<limit;i++){
+    const el=d.getElementById('contact9');
+    if(el)return el;
+    await new Promise(r=>setTimeout(r,50));
+  }
+  return null;
+}
+
 async function install(){
   const w=frame.contentWindow,d=frame.contentDocument;
-  if(!w||!d)return;
-  const old=d.getElementById('contact9');
-  if(!old)return;
+  if(!w||!d)throw new Error('iframe not ready');
+  const old=await waitForContact(d);
+  if(!old)throw new Error('contact9 not found');
 
-  const anchor=d.createElement('span');
-  anchor.id='warehouse9';
-  anchor.style.cssText='display:block;position:relative;top:-6px;height:1px;width:1px;';
   const host=d.createElement('section');
   host.id='contact9';
   host.setAttribute('aria-label','Kontakt i magazyn L&M Technic Energy — MASTER 009 V7B');
-  old.replaceWith(anchor,host);
+  const warehouseAnchor=d.createElement('span');
+  warehouseAnchor.id='warehouse9';
+  warehouseAnchor.style.cssText='display:block;position:relative;top:-6px;height:1px;width:1px;';
+  old.replaceWith(warehouseAnchor,host);
 
   const shadow=host.attachShadow({mode:'open'});
-  const link=d.createElement('link');
-  link.rel='stylesheet';
-  link.href='assets/contact9-v7.css?v=20260907-final-audit-v1';
   const localStyle=d.createElement('style');
   localStyle.textContent=':host{display:block;width:100%;max-width:100%;background:#000;padding:4px 14px 24px;box-sizing:border-box} @media(max-width:430px){:host{padding-left:9px;padding-right:9px}}';
-  const hidden=d.createElement('select');
-  hidden.id='v6Lang';
-  hidden.hidden=true;
+  const link=d.createElement('link');
+  link.rel='stylesheet';
+  link.href='assets/contact9-v7.css?v=20260907-final-audit-v2';
+  const hidden=d.createElement('select');hidden.id='v6Lang';hidden.hidden=true;
   ['pl','de','cs','sk','de-AT','de-CH','nl','be','lv','da','en'].forEach(code=>{const o=d.createElement('option');o.value=code;o.textContent=code;hidden.appendChild(o)});
-  const wrap=d.createElement('div');
-  wrap.innerHTML=V7_MARKUP;
+  const wrap=d.createElement('div');wrap.innerHTML=V7_MARKUP;
   shadow.append(localStyle,link,hidden,...wrap.childNodes);
 
-  try{
-    let code=await fetch('assets/contact9-v6.js?v=20260907-final-audit-v1',{cache:'no-store'}).then(r=>r.text());
-    code=code.replace("const $=id=>document.getElementById(id);","const $=id=>shadowRoot.getElementById(id);");
-    new Function('shadowRoot',code)(shadow);
-  }catch(e){console.error('MASTER 009 language bridge',e)}
+  await new Promise((resolve,reject)=>{link.addEventListener('load',resolve,{once:true});link.addEventListener('error',reject,{once:true});setTimeout(resolve,1500)});
+
+  let code=await fetch('assets/contact9-v6.js?v=20260907-final-audit-v2',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('language js '+r.status);return r.text()});
+  code=code.replace("const $=id=>document.getElementById(id);","const $=id=>shadowRoot.getElementById(id);");
+  new Function('shadowRoot',code)(shadow);
 
   const saved=(()=>{try{return JSON.parse(w.localStorage.getItem('lm-language')||'null')}catch(e){return null}})();
   if(saved&&saved.code){hidden.value=saved.code;hidden.dispatchEvent(new Event('change'))}
   d.querySelectorAll('.opt[data-code]').forEach(btn=>btn.addEventListener('click',()=>setTimeout(()=>{hidden.value=btn.dataset.code||'pl';hidden.dispatchEvent(new Event('change'))},0)));
 
-  const navOffer=d.getElementById('navOffer');
-  const navProducts=d.getElementById('navProducts');
-  const navStock=d.getElementById('navStock');
-  const navLogistics=d.getElementById('navLogistics');
-  const navContact=d.getElementById('navContact');
-  const product=d.querySelector('.product-master');
-  if(product&&!product.id)product.id='products';
-  if(navOffer)navOffer.href='#offer';
-  if(navProducts)navProducts.href='#products';
-  if(navStock)navStock.href='#warehouse9';
-  if(navLogistics)navLogistics.href='#logistics';
-  if(navContact)navContact.href='#contact9';
+  const product=d.querySelector('.product-master');if(product&&!product.id)product.id='products';
+  const navOffer=d.getElementById('navOffer'),navProducts=d.getElementById('navProducts'),navStock=d.getElementById('navStock'),navLogistics=d.getElementById('navLogistics'),navContact=d.getElementById('navContact');
+  if(navOffer)navOffer.href='#offer';if(navProducts)navProducts.href='#products';if(navStock)navStock.href='#warehouse9';if(navLogistics)navLogistics.href='#logistics';if(navContact)navContact.href='#contact9';
 
-  const shop=d.querySelector('.shop-btn');
-  const heroShop=d.getElementById('heroCta');
-  const v7Store=shadow.getElementById('v6StoreBtn');
-  const shopHref=shop?shop.getAttribute('href'):'#';
-  if(heroShop&&shopHref)heroShop.href=shopHref;
-  if(v7Store&&shopHref)v7Store.href=shopHref;
+  const shop=d.querySelector('.shop-btn'),heroShop=d.getElementById('heroCta'),v7Store=shadow.getElementById('v6StoreBtn');
+  const shopHref=shop?shop.getAttribute('href'):'#';if(heroShop&&shopHref)heroShop.href=shopHref;if(v7Store&&shopHref)v7Store.href=shopHref;
 
-  d.documentElement.dataset.finalAudit='v1-master009-v7b';
+  d.documentElement.dataset.finalAudit='v2-master009-v7b';
+  frame.classList.add('ready');
 }
-frame.addEventListener('load',()=>{install().catch(console.error)});
+
+frame.addEventListener('load',()=>{install().catch(err=>{console.error('FINAL AUDIT V2',err);frame.classList.add('ready')})},{once:true});
+frame.src='index.html?final-audit-v2=20260907-0903';
 })();
 </script>
 </body>
