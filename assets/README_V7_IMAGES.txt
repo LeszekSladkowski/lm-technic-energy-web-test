@@ -1,0 +1,1 @@
+Binary assets are written through Git data in the next commit.
